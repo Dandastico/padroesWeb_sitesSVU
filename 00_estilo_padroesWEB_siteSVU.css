@@ -1,0 +1,463 @@
+/* FONTES IMPORTADAS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* DECLARAÇÃO DE VARIÁVEIS */
+:root {
+    --corPreta : #141821;
+    --corBranca: #fff;
+    --corAzulPrimaria: #008FFB;
+    --corVerdePrimaria: #2F887C;
+    --corAmarelaPrimaria: #FFC736;
+    --corMagentaPrimaria: #FF4E79;
+    --corCinzaPrimaria: #697078;
+    --corCinzaSecundaria: #EEEFF0;
+    --corAzulSecundaria: #CCE9FE;
+    --corVerdeSecundaria: #EBF7ED;
+    --corAmarelaSecundaria: #FFF4D7;
+    --corMagentaSecundaria: #FFDCE4;
+    
+    /* MARGENS LATERAIS */
+    --paddingLateral: 6rem;
+}
+
+/* PREPARANDO O TERRENO */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    display: block;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+/* NAVEGAÇÃO */
+.navContainer {
+    background-color: var(--corCinzaSecundaria);
+    display: block;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    position: sticky; /* AcCOMPANHA POR TODO O SITE */
+    top: 0px;
+    z-index: 1;
+    transition: background-color 0.4s ease-in-out;
+}
+
+header.scrolled {
+    background-color: var(--corBranca);
+    box-shadow: 0 0 1rem 0 rgba(105, 112, 120, 0.4);
+}
+
+.navBarra {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.75rem 6rem;
+    width: 100%;
+}
+
+.navLista {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    width: 100%;
+
+}
+
+.navItens {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    flex-direction: column;
+    position: relative;
+}
+
+
+    /* LOGOTIPO NA NAVEGAÇÃO */
+.logo {
+    height: 27px;
+    margin-left: 0px !important;
+}
+
+.navItens_Logo {
+    margin-right: 0.75rem !important;
+    margin-left: 0 !important;
+    flex-direction: column;
+    position: relative;
+}
+
+    /* LINKS NA NAVEGAÇÃO */
+.navLinks {
+    border: none;
+    padding: 0.5rem 0;
+    display: inline-block;
+    position: relative;
+    color: var(--corPreta);
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.navLinks:hover {
+    color: var(--corAzulPrimaria);
+}
+
+    /* SETAS E MENU DROPDOWN */
+.navLinks div {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navSetinha {
+    width: 0.75rem;
+    margin-left: 0.3125rem;
+}
+
+.navDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.navDropdown_container {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    background-color: var(--corBranca);
+    box-shadow: 0px 8px 16px 0px rgba(105, 112, 120, 0.2);
+    white-space: nowrap; /* IMPEDE A QUEBRA DE LINHA DOS LINKS */
+    border-top: 3px solid var(--corAzulPrimaria);
+}
+
+.show {
+    display: block; /* CLASSE SERÁ ADICIONA COM JAVASCRIPT EM NAVDROPDOWN_CONTAINER */
+}
+
+.navDropdown_lista {
+    padding: 0.75rem 0px;
+    margin: 0;
+    align-items: center;
+    display: list-item;
+    list-style: none;
+    width: 100%;
+}
+
+.navDropdown_links {
+    border: none;
+    color: var(--corPreta);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1px;
+    padding: 1rem 0px;
+}
+
+.navDropdown_links:hover {
+    color: var(--corAzulPrimaria)
+}
+
+    /* BOTÕES NA NAVEGAÇÃO */
+.navItens_BotaoLogIn {
+    margin-left: auto !important;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.navItens_botaoLogIn::before {
+    content: "";
+    display: flex;
+    flex-grow: 1;
+}
+
+.botaoLogIn {
+    background-color: var(--corCinzaSecundaria);
+    color: var(--corPreta);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+
+.botaoLogIn:hover {
+    background-color: rgba(105, 112, 120, 20%);
+    color: var(--corPreta);
+}
+
+.navItens_CriarConta {
+    margin-right: 0 !important;
+}
+
+.botaoCriarConta {
+    background-color: var(--corAzulPrimaria);
+    color: var(--corBranca) !important;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+
+.botaoCriarConta:hover {
+    background-color: var(--corMagentaPrimaria);
+}
+
+/* SEÇÃO HERO */
+.heroSection {
+    background-image: linear-gradient(var(--corCinzaSecundaria),
+    var(--corBranca));
+}
+
+.heroIndex {
+    display: flex;
+    padding: 0;
+    height: calc(100vh - 4.4375rem);
+}
+
+.heroIndex_conteudo {
+    background-color: transparent;
+    width: 50vw;
+    position: relative;
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    
+}
+
+.heroIndex_conteudo h1 {
+    font-size: 3.125rem;
+    color: var(--corPreta);
+    display: flex;
+    margin-bottom: 0rem;
+}
+
+.heroIndex_slogan {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--corPreta);
+    display: flex;
+    margin: 1rem 0 3rem 0;
+}
+
+.formTitulo {
+    margin-top: 2rem;
+    color: var(--corPreta);
+    font-weight: 400;
+    /* padding-right: 4rem; */
+}
+
+.formLogin {
+    display: grid;
+    row-gap: 1rem;
+    padding-right: 6rem;
+}
+
+.formLogin input {
+    border: 1px solid var(--corCinzaPrimaria);
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--corCinzaPrimaria);
+    background-color: var(--corBranca);
+}
+
+.btn_criarConta {
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 5px;
+    background-color: var(--corAzulPrimaria);
+    border: 2px solid var(--corCinzaPrimaria);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--corBranca);
+}
+
+.btn_criarConta:hover {
+    background-color: var(--corMagentaPrimaria);
+}
+
+.heroIndex_imagemContainer {
+    position: relative;
+    width: 50vw;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.heroIndex_imagemContainer  div {
+    position: relative;
+    overflow: clip;
+    width: 100%;
+    height: 100%;
+}
+
+.heroIndex_imagem {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+    left: -11rem;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--corPreta);
+}
+
+.footerGrid {
+    padding: 2rem 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.footerGrid_sub {
+    grid-column-end: span 4;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: min-content;
+}
+
+.footerTitulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--corAzulPrimaria);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.footerLista {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: block;  
+}
+
+.footerLista_itens {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.5rem 0;
+}
+
+.footerLink {
+    color: var(--corBranca);
+    padding: 0;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    color: var(--corMagentaPrimaria);
+    font-weight: 600;
+}
+
+    /* RODAPÉ - ÍCONES DE REDES SOCIAIS */
+.footerLogoSocial{
+    position: relative;
+    display: flex;
+    padding: 2rem 6rem 0;
+}
+
+.footerLogo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.footerLogo_img {
+    height: 27px;
+    position: relative;
+}
+
+.footerSocial {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.footerSocial ul {
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
+.footerSocial ul li {
+    display: inline-block;
+}
+
+.footerIcons {
+    color: var(--corBranca);
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.footerIcons:hover {
+    color: var(--corMagentaPrimaria);
+}
+
+    /* RODAPÉ - BAIXE NOSSO APP */
+.footerBaixeApp {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 6rem 6rem;
+}
+
+.footerBaixeApp_wrap {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+.footerBaixeApp .footerTitulo {
+    display: block;
+    color: var(--corAzulPrimaria);
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.footerBaixeApp_link {
+    background-color: var(--corMagentaPrimaria);
+    color: var(--corBranca);
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 1.5rem;
+}
+
+.footerBaixeApp_link:hover {
+    font-weight: 600;
+}
+
+.footerBaixeApp_link span {
+    margin-left: 0.2rem;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-slace=1.0" />
+        <link rel="stylesheet" href="./00_estilo_padroesWEB_siteSVU.css" />
+        <title>SVU: Sistema de Vacina Único </title>
+    </head>
+    <body>
+        <!--NAVEGAÇÃO-->
+        <header class="navContainer">
+            <nav class="navBarra">
+                <ul class="navLista">
+                    <!-- LOGOTIPO NA NAVEGAÇÃO -->
+                    <li class="navItens navItens_Logo">
+                        <a class="navLinks" href="#">
+                            <img class="logo" src="./_imagens_padroesWEB_siteSVU/logo_svu_horizontal.png" alt="" />
+                        </a>
+                    </li>
+                    <!-- VACINAS -->
+                    <li class="navItens">
+                        <div class="navDropdown">
+                            <a class="navLinks navDropdown_btn"  onclick="navDropdown_button()">
+                                <div>
+                                    <span>Vacinas</span>
+                                    <img class="navSetinha" src="./_imagens_padroesWEB_siteSVU/seta_nav.png" />
+                                </div>
+                            </a>
+                            <div id="navDropdown_container" class="navDropdown_container">
+                                <ul class="navDropdown_lista">
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Pré-Agendamento
+                                        </a>
+                                    </li>
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Cartão de Vacina
+                                        </a>
+                                    </li>
+                                    <!--
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Roteiro das Vacinas
+                                        </a>
+                                    </li>
+                                    -->
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Informações Sobre Vacinas
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- UNIDADES -->
+                    <li class="navItens">
+                        <a class="navLinks" href="#">
+                            Unidades
+                        </a> 
+                    </li>
+                    <!-- NOTÍCIAS -->
+                    <li class="navItens">
+                        <a class="navLinks" href="#">
+                            Notícias
+                        </a> 
+                    </li>
+                    <!-- FALE CONOSCO -->
+                    <li class="navItens">
+                        <a class="navLinks" href="#">
+                            Fale conosco
+                        </a> 
+                    </li>
+                    <!-- BOTÃO LOG-IN -->
+                    <li class="navItens navItens_BotaoLogIn">
+                        <a class="navLinks botaoLogIn" href="#">
+                            Entrar
+                        </a> 
+                    </li>
+                    <!-- BOTÃO CRIAR CONTA -->
+                    <li class="navItens navItens_CriarConta">
+                        <a class="navLinks botaoCriarConta" href="#">
+                            Criar conta
+                        </a> 
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <!--HERO-->
+            <section class="heroSection">
+                <div class="heroIndex">
+                    <!-- IMAGEM NO BANNER INICIAL -->
+                    <div class="heroIndex_imagemContainer">
+                        <div>
+                            <img class="heroIndex_imagem" src="./_imagens_padroesWEB_siteSVU/imagemHeroVacina_editado2.jpg" alt="" />
+                        </div>
+                    </div> 
+                    <!-- CONTEÚDO ESCRITO DO BANNER INICIAL --> 
+                    <div class="heroIndex_conteudo">
+                        <h1>
+                            Tudo sobre vacinas
+                            <br />
+                            em um só lugar:
+                        </h1>
+                        <span class="heroIndex_slogan">
+                            Sem confusão, sem desinformação
+                        </span>
+                        <!-- <p>
+                            O melhor momento para se defender é agora
+                        </p> -->
+                        <div class="formContainer">
+                            <h2 class="formTitulo">
+                                Se inscreva ao SVU e se proteja melhor
+                                <br />
+                                junto com milhares de brasileiros
+                            </h2>
+                            <!-- FORMULÁRIO -->
+                            <form class="formLogin">
+                                <span>
+                                    *Necessários
+                                </span>
+                                <label for="emailUsuario">
+                                    Email*
+                                </label>
+                                <input type="email" id="emailUsuario" name="emailUsuario" placeholder="exemplo@email.com" />
+                                <label for="senhaUsuario">
+                                    Senha*
+                                </label>
+                                <input type="password" id="senhaUsuario" name="senhaUsuario" placeholder="senha" />
+                                <button class="btn_criarConta" type="submit">Criar conta</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!--NOTÍCIAS-->
+            <section>
+
+            </section>
+
+            <!--SERVIÇOS EM DESTAQUE-->
+            <section>
+
+            </section>
+        </main>
+        
+        <!--RODAPÉ-->
+        <footer>
+            <!-- LOGOTIPO E REDES SOCIAIS RODAPÉ -->
+            <div class="footerLogoSocial">
+                <div class="footerLogo">
+                    <img class="footerLogo_img" src="./_imagens_padroesWEB_siteSVU/logo_svu_horizontal_branca.png" alt="Logotipo do SVU branca" />
+                </div>
+                <div class="footerSocial">
+                    <ul>
+                        <li>
+                            <a class="footerIcons fa fa-facebook" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="footerIcons fa fa-instagram" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="footerIcons fa-brands fa-bluesky" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="footerIcons fa fa-youtube" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- LINKS DE NAVEGAÇÃO NO RODAPÉ -->
+            <div class="footerGrid">
+                <div class="footerGrid_sub">
+                    <h3 class="footerTitulo">
+                        Vacinas
+                    </h3>
+                    <ul class="footerLista">
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Pré-Agendamento
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Cartão de Vacinas
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Informações sobre Vacinas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footerGrid_sub">
+                    <div class="footerGrid_sub">
+                        <h3 class="footerTitulo">
+                            Central de Atendimento
+                        </h3>
+                        <ul class="footerLista">
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Unidades
+                                </a>
+                            </li>
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Atendimento Digital
+                                </a>
+                            </li>
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Atendimento à Empresas
+                                </a>
+                            </li>
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Perguntas Frequentes
+                                </a>
+                            </li>
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Fale Conosco
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerGrid_sub">
+                    <div class="footerGrid_sub">
+                        <h3 class="footerTitulo">
+                            O Sistema de Vacina Único
+                        </h3>
+                        <ul class="footerLista">
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Quem Somos
+                                </a>
+                            </li>
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Eventos
+                                </a>
+                            </li>
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Política de Privacidade
+                                </a>
+                            </li>
+                            <li class="footerLista_itens">
+                                <a class="footerLink" href="#">
+                                    Trabalhe Conosco
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- APP STORE -->
+            <div class="footerBaixeApp">
+                <div class="footerBaixeApp_wrap">
+                    <h3 class="footerTitulo">
+                        Baixe nosso aplicativo
+                    </h3>
+                    <a class="footerBaixeApp_link" href="#">
+                        <i class="fa-brands fa-google-play"></i>
+                        <span>Google Store</span>
+                    </a>
+                    <a class="footerBaixeApp_link" href="#">
+                        <i class="fa-brands fa-app-store"></i>
+                        <span>App Store</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT -->
+        <script src="./00_javaScript_padroesWeb_siteSVU.js"></script>
+        <!-- JAVASCRIPT DOS ÍCONES -->
+        <script src="https://kit.fontawesome.com/d98fb0a598.js" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
