@@ -132,7 +132,7 @@ header.scrolled {
 }
 
 
-.navDropdown_container {
+.navDropdown_containerVac, .navDropdown_containerFale {
     display: none;
     position: absolute;
     overflow: hidden;
@@ -308,11 +308,70 @@ header.scrolled {
 }
 
 .heroIndex_imagem {
-    position: absolute;
+    position: relative;
     object-fit: cover;
     height: 100%;
     width: auto;
     left: -11rem;
+}
+
+/* SECTIONS DA PÁGINA PRINCIPAL */
+.sectionMain {
+    background-color: var(--corBranca);
+    margin-top: 3rem;
+}
+
+.containerMain {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 4.4375rem);
+    padding: 4rem 6rem 2rem;
+}
+
+.conteudoMetade {
+    width: 50vw;
+    position: relative;
+    
+}
+
+.tituloMain {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.paragrafoMain {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.conteudoMetade .paragrafoMain {
+    padding-right: 6rem;
+}
+
+.imagemMetade {
+    width: 50vw;
+    position: relative;
+    padding: 0;
+}
+
+.imagemMetade_moldura {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.imagemMetade_voFeliz {
+    position: relative;
+    height: 90vh;
+    top: -5rem;
+    left: -1rem;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 /* RODAPÉ */
