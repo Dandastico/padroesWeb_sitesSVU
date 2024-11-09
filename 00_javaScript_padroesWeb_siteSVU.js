@@ -9,13 +9,30 @@ document.addEventListener('scroll', () => {
 })
 
 //FUNÇÃO DO DROPDOWN
-function navDropdown_button() {
-    document.getElementById("navDropdown_container").classList.toggle("show")
+function navDropdown_buttonVac() {
+    document.getElementById("navDropdown_containerVac").classList.toggle("show")
 }
 
 window.onclick = function(event) {
-    if (!event.target.matches('.navDropdown_btn')) {
-      var dropdowns = document.getElementsByClassName("navDropdown_container");
+    if (!event.target.matches('.navDropdown_btnVac')) {
+      var dropdowns = document.getElementsByClassName("navDropdown_containerVac");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  function navDropdown_buttonFale() {
+    document.getElementById("navDropdown_containerFale").classList.toggle("show")
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.navDropdown_btnFale')) {
+      var dropdowns = document.getElementsByClassName("navDropdown_containerFale");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];

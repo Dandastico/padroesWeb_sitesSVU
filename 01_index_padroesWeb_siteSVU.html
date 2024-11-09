@@ -17,16 +17,16 @@
                             <img class="logo" src="./_imagens_padroesWEB_siteSVU/logo_svu_horizontal.png" alt="" />
                         </a>
                     </li>
-                    <!-- VACINAS -->
+                    <!-- VACINAS + DROPDOWN -->
                     <li class="navItens">
                         <div class="navDropdown">
-                            <a class="navLinks navDropdown_btn"  onclick="navDropdown_button()">
+                            <a class="navLinks navDropdown_btnVac"  onclick="navDropdown_buttonVac()">
                                 <div>
                                     <span>Vacinas</span>
                                     <img class="navSetinha" src="./_imagens_padroesWEB_siteSVU/seta_nav.png" />
                                 </div>
                             </a>
-                            <div id="navDropdown_container" class="navDropdown_container">
+                            <div id="navDropdown_containerVac" class="navDropdown_containerVac">
                                 <ul class="navDropdown_lista">
                                     <li class="navDropdown_itens">
                                         <a class="navDropdown_links" href="#">
@@ -38,13 +38,6 @@
                                             Cartão de Vacina
                                         </a>
                                     </li>
-                                    <!--
-                                    <li class="navDropdown_itens">
-                                        <a class="navDropdown_links" href="#">
-                                            Roteiro das Vacinas
-                                        </a>
-                                    </li>
-                                    -->
                                     <li class="navDropdown_itens">
                                         <a class="navDropdown_links" href="#">
                                             Informações Sobre Vacinas
@@ -66,11 +59,30 @@
                             Notícias
                         </a> 
                     </li>
-                    <!-- FALE CONOSCO -->
+                    <!-- FALE CONOSCO + DROPDOWN -->
                     <li class="navItens">
-                        <a class="navLinks" href="#">
-                            Fale conosco
-                        </a> 
+                        <div class="navDropdown">
+                            <a class="navLinks navDropdown_btnFale"  onclick="navDropdown_buttonFale()">
+                                <div>
+                                    <span>Fale Conosco</span>
+                                    <img class="navSetinha" src="./_imagens_padroesWEB_siteSVU/seta_nav.png" />
+                                </div>
+                            </a>
+                            <div id="navDropdown_containerFale" class="navDropdown_containerFale">
+                                <ul class="navDropdown_lista">
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Perguntas Frequentes
+                                        </a>
+                                    </li>
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Fale com o SVU
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <!-- BOTÃO LOG-IN -->
                     <li class="navItens navItens_BotaoLogIn">
@@ -139,14 +151,50 @@
                 </div>
             </section>
 
-            <!--NOTÍCIAS-->
-            <section>
-
+            <!--PRIMEIRO PITCH-->
+            <section class="sectionMain">
+                <div class="containerMain">
+                    <div class="conteudoMetade">
+                        <h2 class="tituloMain">
+                            Rastreie, gerencie e informe-se sobre todas suas vacinas
+                        </h2>
+                        <p class="paragrafoMain">
+                            Nunca mais se preocupe com seu cartão de vacina, procurar se todas estão em dias e quais você tem o direito. Agora está nas nossas mãos!
+                        </p>
+                        <p class="paragrafoMain">
+                            Ao se inscrever no SVu você terá acesso ao todo seu histórico de vacinação com apenas um clique.
+                        </p>
+                    </div>
+                    <div class="imagemMetade">
+                        <div class="imagemMetade_moldura">
+                            <img class="imagemMetade_voFeliz" src="./_imagens_padroesWEB_siteSVU/2024.11_padroesWeb_siteSVU_ilustra_voFeliz.png" alt="Uma mulher com idade mais avançada feliz com ícones de dispositivos tecnológicos em volta dela" />
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!--SERVIÇOS EM DESTAQUE-->
-            <section>
-
+            <!--SEGUNDO PITCH-->
+            <section class="sectionMain">
+                <div class="containerMain">
+                    <div class="containerInteiro">
+                        <h2 class="tituloMain_centro">
+                            Proteja quem você ama
+                        </h2>
+                        <p class="subtituloMain_centro">
+                            Acompanhe o cartão de vacina de parentes e amigos
+                        </p>
+                    </div>
+                    <div class="imagemMetade">
+                        <div class="imagemMetade_moldura">
+                            <img class="" src="" alt="" />
+                        </div>
+                    </div>
+                    <div class="conteudoMetade">
+                        <p class="paragrafoMain">
+                            paragrafo maneiro que faz todo mundo chorar!
+                        </p>
+                    </div>
+                </div>
             </section>
         </main>
         
