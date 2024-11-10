@@ -18,50 +18,6 @@
     --corMagentaSecundaria: #FFDCE4;
 }
 
-/* CLASSES PARA RESPONSIVIDADE */
-/* CLASSES PARA ACIMA DE 1440PX (DESKTOPS) */
-.paddingLateral {
-    padding-left: 6rem;
-    padding-right: 6rem;
-}
-
-.paddingLateral_heroForm {
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
-}
-
-/* CLASSES PARA ACIMA DE 1200PX (NOTEBOOK PEQUENO) */
-
-@media only screen and (min-width: 1200px) and (max-width: 1439px) {
-    
-    .paddingLateral {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
-
-    .paddingLateral_heroForm {
-        padding-left: 5.5rem;
-        padding-right: 5.5rem;
-    }
-}
-
-/* CLASSES PARA ACIMA DE 768PX (TABLET) */
-
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-
-    .paddingLateral {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-
-    .paddingLateral_heroForm {
-        padding-left: 3.5rem;
-        padding-right: 3.5rem;
-    }
-}
-
-/* CLASSES PARA CELULARES */
-
 /* PREPARANDO O TERRENO */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -77,7 +33,7 @@ body {
     background-color: #fff;
 }
 
-h2, h3, p {
+h1, h2, h3, p {
     margin: 0;
     color: var(--corPreta), #000;
 }
@@ -270,19 +226,27 @@ header.scrolled {
 .heroIndex {
     display: flex;
     padding: 0;
-    height: calc(100vh - 4.4375rem);
+    max-height: calc(100vh - 4.4375rem);
 }
 
 .heroIndex_conteudo {
     background-color: transparent;
     width: 50vw;
     position: relative;
+    /* display: flex; */
     /* padding-left: 5.5rem;
     padding-right: 5.5rem; */
     
 }
 
-.heroIndex_conteudo h1 {
+.heroIndex_conteudoTitulo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+}
+
+.heroIndex_conteudoTitulo h1 {
     font-size: 3.125rem;
     color: var(--corPreta);
     display: flex;
@@ -349,13 +313,8 @@ header.scrolled {
     position: relative;
     width: 50vw;
     padding: 0rem 0rem 0rem 0rem;
-}
-
-.heroIndex_imagemContainer div {
-    position: relative;
+    /* min-height: 100vh; */
     overflow: clip;
-    width: 100%;
-    height: 100%;
 }
 
 .heroIndex_imagem {
@@ -363,7 +322,7 @@ header.scrolled {
     object-fit: cover;
     height: 100%;
     width: auto;
-    left: -11rem;
+    /* left: -11rem; */
 }
 
 /* SEÇÕES DA PÁGINA PRINCIPAL */
@@ -378,15 +337,15 @@ header.scrolled {
 .containerMain {
     display: flex;
     width: 100%;
-    height: calc(100vh - 4.4375rem);
-    padding: 4rem 6rem 0;
+    /* height: calc(100vh - 4.4375rem); */
+    /* padding: 4rem 6rem 0; */
 }
 
 .conteudoMetade {
     width: 50vw;
     position: relative;
     padding-left: 4rem ;
-    padding-top: 2rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -426,8 +385,9 @@ header.scrolled {
 
 .imagemMetade_voFeliz {
     position: relative;
-    height: 85vh;
-    top: -3rem;
+    /* height: 85vh; */
+    width: 40vw;
+    /* top: -3rem; */
     left: -1rem;
     margin-left: auto;
     margin-right: auto;  
@@ -439,13 +399,12 @@ header.scrolled {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 4.4375rem);
-    margin-left: auto;
-    margin-right: auto;
+    /* height: calc(100vh - 4.4375rem); */
+    margin-inline: auto;
 }
 
 .inteiroContainer .containerMain {
-    height: 100%;
+    /* height: 100%; */
     padding-top: 1rem;
 }
 
@@ -498,11 +457,11 @@ header.scrolled {
 .imagemMetade_acompanhe {
     overflow: visible;
     position: relative;
-    height: 72vh;
+    /* height: 72vh; */
+    width: 38vw;
     /* top: 0rem; */
     left: 3rem;
-    margin-left: auto;
-    margin-right: auto;  
+    margin-inline: auto; 
 }
 
 .btnMain {
@@ -543,6 +502,7 @@ header.scrolled {
     position: relative;
     display: block;
     width: 100%;
+    padding-top: 3rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--corCinzaPrimaria);
 }
@@ -552,8 +512,9 @@ header.scrolled {
     position: relative;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     width: 100%;
-    height: 55vh;
+    /* height: 55vh; */
     margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .subGrid_comoFunciona {
@@ -579,14 +540,16 @@ header.scrolled {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    /* margin-bottom: -6rem; */
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .subGrid_icon {
     object-fit: scale-down;
     position: relative;
-    height: 6rem;
-    width: auto;
+    /* height: 6rem; */
+    width: 6rem;
+    margin-inline: auto;
 }
 
 .subGrid_tituloContainer {
@@ -594,6 +557,7 @@ header.scrolled {
     display: flex;
     align-content: center;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .subGrid_titulo {
@@ -608,6 +572,7 @@ header.scrolled {
     display: flex;
     align-content: center;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .subGrid_paragrafoContainer .paragrafoMain {
@@ -761,3 +726,72 @@ footer {
 .footerBaixeApp_link span {
     margin-left: 0.2rem;
 }
+
+
+/* CLASSES PARA RESPONSIVIDADE */
+/* CLASSES PARA ACIMA DE 1440PX (DESKTOPS) */
+.paddingLateral {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.paddingLateral_heroForm {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+}
+
+/* CLASSES PARA ACIMA DE 1200PX (NOTEBOOK PEQUENO) */
+
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+    
+    .paddingLateral {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .paddingLateral_heroForm {
+        padding-left: 5.5rem;
+        padding-right: 5.5rem;
+    }
+
+    
+    .heroIndex_conteudoTitulo {
+        position: absolute;
+        margin-top: -1.5rem;
+        left: -22rem;
+        padding-right: 35rem;
+    }
+
+    .heroIndex_conteudoTitulo h1 {
+        white-space: pre-line;
+    }
+
+    .heroIndex_slogan {
+        white-space: pre-line;
+        margin-top: -1.2rem;
+    }
+
+    .formTitulo {
+        margin-top: 3rem;
+    }
+
+}
+
+
+
+/* CLASSES PARA ACIMA DE 768PX (TABLET) */
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .paddingLateral {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .paddingLateral_heroForm {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+}
+
+/* CLASSES PARA CELULARES */
