@@ -16,10 +16,51 @@
     --corVerdeSecundaria: #EBF7ED;
     --corAmarelaSecundaria: #FFF4D7;
     --corMagentaSecundaria: #FFDCE4;
-    
-    /* MARGENS LATERAIS */
-    --paddingLateral: 6rem;
 }
+
+/* CLASSES PARA RESPONSIVIDADE */
+/* CLASSES PARA ACIMA DE 1440PX (DESKTOPS) */
+.paddingLateral {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.paddingLateral_heroForm {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+}
+
+/* CLASSES PARA ACIMA DE 1200PX (NOTEBOOK PEQUENO) */
+
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+    
+    .paddingLateral {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .paddingLateral_heroForm {
+        padding-left: 5.5rem;
+        padding-right: 5.5rem;
+    }
+}
+
+/* CLASSES PARA ACIMA DE 768PX (TABLET) */
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .paddingLateral {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .paddingLateral_heroForm {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+}
+
+/* CLASSES PARA CELULARES */
 
 /* PREPARANDO O TERRENO */
 *, *::before, *::after {
@@ -34,6 +75,11 @@ html {
 body {
     margin: 0;
     background-color: #fff;
+}
+
+h2, h3, p {
+    margin: 0;
+    color: var(--corPreta), #000;
 }
 
 /* NAVEGAÇÃO */
@@ -64,7 +110,8 @@ header.scrolled {
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0.75rem 6rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     width: 100%;
 }
 
@@ -230,8 +277,8 @@ header.scrolled {
     background-color: transparent;
     width: 50vw;
     position: relative;
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
+    /* padding-left: 5.5rem;
+    padding-right: 5.5rem; */
     
 }
 
@@ -240,6 +287,7 @@ header.scrolled {
     color: var(--corPreta);
     display: flex;
     margin-bottom: 0rem;
+    letter-spacing: 0.075em;
 }
 
 .heroIndex_slogan {
@@ -254,13 +302,16 @@ header.scrolled {
     margin-top: 2rem;
     color: var(--corPreta);
     font-weight: 400;
-    /* padding-right: 4rem; */
 }
 
 .formLogin {
     display: grid;
     row-gap: 1rem;
-    padding-right: 6rem;
+    padding-left: 0rem;
+}
+
+.formLogin span {
+    margin-top: 1rem;
 }
 
 .formLogin input {
@@ -284,7 +335,7 @@ header.scrolled {
     min-width: 40px;
     border-radius: 5px;
     background-color: var(--corAzulPrimaria);
-    border: 2px solid var(--corCinzaPrimaria);
+    /* border: 2px solid var(--corCinzaPrimaria); */
     font-size: 1rem;
     font-weight: 600;
     color: var(--corBranca);
@@ -300,7 +351,7 @@ header.scrolled {
     padding: 0rem 0rem 0rem 0rem;
 }
 
-.heroIndex_imagemContainer  div {
+.heroIndex_imagemContainer div {
     position: relative;
     overflow: clip;
     width: 100%;
@@ -315,35 +366,44 @@ header.scrolled {
     left: -11rem;
 }
 
-/* SECTIONS DA PÁGINA PRINCIPAL */
+/* SEÇÕES DA PÁGINA PRINCIPAL */
 .sectionMain {
     background-color: var(--corBranca);
-    margin-top: 3rem;
 }
+
+/* .sectionMain_margemTopo {
+    margin-top: 3rem;
+} */
 
 .containerMain {
     display: flex;
     width: 100%;
     height: calc(100vh - 4.4375rem);
-    padding: 4rem 6rem 2rem;
+    padding: 4rem 6rem 0;
 }
 
 .conteudoMetade {
     width: 50vw;
     position: relative;
-    
+    padding-left: 4rem ;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tituloMain {
     font-size: 2.75rem;
     font-weight: 700;
     line-height: 1.2;
+    margin-bottom: 2rem;
 }
 
 .paragrafoMain {
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.5;
+    margin-bottom: 1.2rem;
 }
 
 .conteudoMetade .paragrafoMain {
@@ -366,12 +426,193 @@ header.scrolled {
 
 .imagemMetade_voFeliz {
     position: relative;
-    height: 90vh;
-    top: -5rem;
+    height: 85vh;
+    top: -3rem;
     left: -1rem;
     margin-left: auto;
+    margin-right: auto;  
+}
+
+/* SEÇÃO - ACOMPANHE QUEM VOCÊ AMA */
+
+.inteiroContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 4.4375rem);
+    margin-left: auto;
     margin-right: auto;
-    
+}
+
+.inteiroContainer .containerMain {
+    height: 100%;
+    padding-top: 1rem;
+}
+
+.tituloMain_centro {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--corPreta);
+}
+
+.subtituloMain_centro {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+
+.conteudoMetade_direito {
+    width: 50vw;
+    position: relative;
+    padding: 0 6rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudoMetade_direito .paragrafoMain {
+    display: block;
+    width: 100%;
+}
+
+.conteudoMetade_direito small {
+    font-size: 0.625;
+    font-weight: 400;
+}
+
+
+.imagemMetade_acompanhe {
+    overflow: visible;
+    position: relative;
+    height: 72vh;
+    /* top: 0rem; */
+    left: 3rem;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.btnMain {
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    background-color: var(--corAmarelaPrimaria);
+    color: var(--corBranca);
+    font-size: 1.5rem;
+    font-weight: 600;
+    transform: translateY( 0rem );
+    transition: 0.2s ease-in-out;
+}
+
+.btnMain:hover {
+    background-color: var(--corMagentaPrimaria);
+    transform: translateY( -.25rem );
+    transition: 0.1s ease-in-out;
+}
+
+/* COMO FUNCIONA */
+.sectionMain_cinza {
+    background-color: var(--corCinzaSecundaria);
+}
+
+.columnEmergencial {
+    flex-direction: column;
+}
+
+.containerTitulo_grid {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--corCinzaPrimaria);
+}
+
+.containerGrid_comoFunciona {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    height: 55vh;
+    margin-top: 2rem;
+}
+
+.subGrid_comoFunciona {
+    display: grid;
+    position: relative;
+    grid-template-rows: minamx(auto);
+    width: 100%;
+    padding: 0 3rem;
+    border-right: 1px solid var(--corCinzaPrimaria)
+}
+
+.subGrid_comoFunciona:first-of-type {
+    padding-left : 0rem;
+}
+
+.subGrid_comoFunciona:last-of-type {
+    padding-right: 0rem;
+    border: 0;
+}
+
+.subGrid_iconMoldura {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* margin-bottom: -6rem; */
+}
+
+.subGrid_icon {
+    object-fit: scale-down;
+    position: relative;
+    height: 6rem;
+    width: auto;
+}
+
+.subGrid_tituloContainer {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.subGrid_titulo {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--corPreta), #000;
+    text-align: center;
+}
+
+.subGrid_paragrafoContainer {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.subGrid_paragrafoContainer .paragrafoMain {
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* RODAPÉ */
