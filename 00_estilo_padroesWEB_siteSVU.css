@@ -73,7 +73,9 @@ header.scrolled {
 
 .navHamburger_ativacao {
     display: hidden;
-    z-index: 9999;
+    z-index: 100;
+    border: 0;
+    position: absolute;
 }
 
 .navLista {
