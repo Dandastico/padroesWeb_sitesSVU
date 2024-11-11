@@ -71,6 +71,11 @@ header.scrolled {
     width: 100%;
 }
 
+.navHamburger_ativacao {
+    display: hidden;
+    z-index: 9999;
+}
+
 .navLista {
     padding: 0;
     margin: 0;
@@ -78,7 +83,7 @@ header.scrolled {
     display: flex;
     list-style: none;
     width: 100%;
-
+    
 }
 
 .navItens {
@@ -95,7 +100,7 @@ header.scrolled {
     margin-left: 0px !important;
 }
 
-.navItens_Logo {
+.navItens_logo {
     margin-right: 0.75rem !important;
     margin-left: 0 !important;
     flex-direction: column;
@@ -178,7 +183,7 @@ header.scrolled {
 
     /* BOTÕES NA NAVEGAÇÃO */
 .navItens_BotaoLogIn {
-    margin-left: auto !important;
+    margin-left: auto;
     justify-content: center;
     flex-direction: column;
     position: relative;
@@ -250,7 +255,7 @@ header.scrolled {
     font-size: 3.125rem;
     color: var(--corPreta);
     display: flex;
-    margin-bottom: 0rem;
+    margin-top: 2rem;
     letter-spacing: 0.075em;
 }
 
@@ -259,11 +264,11 @@ header.scrolled {
     font-weight: 600;
     color: var(--corPreta);
     display: flex;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
 .formTitulo {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: var(--corPreta);
     font-weight: 400;
 }
@@ -735,6 +740,11 @@ footer {
     padding-right: 6rem;
 }
 
+.paddingLateral_nav {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 .paddingLateral_heroForm {
     padding-left: 5.5rem;
     padding-right: 5.5rem;
@@ -757,13 +767,14 @@ footer {
     
     .heroIndex_conteudoTitulo {
         position: absolute;
-        margin-top: -1.5rem;
+        /* margin-top: -1.5rem; */
         left: -22rem;
         padding-right: 35rem;
     }
 
     .heroIndex_conteudoTitulo h1 {
         white-space: pre-line;
+        margin-top: -1.5rem;
     }
 
     .heroIndex_slogan {
@@ -795,3 +806,159 @@ footer {
 }
 
 /* CLASSES PARA CELULARES */
+
+@media only screen and (max-width: 767px) {
+
+    .paddingLateral {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .paddingLateral_nav {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .paddingLateral_heroForm {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    /* NAVEGAÇÃO MOBILE */
+    
+    .navContainer {
+        align-items: center;
+        display: flex;
+    }
+
+    .navBarra {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+
+    .navHamburger_ativacao {
+        padding-block: 0;
+        padding-inline: 0;
+        display: block;
+        position: absolute;
+        background: url(./_imagens_padroesWEB_siteSVU/menuHamburger.png);
+        background-size: 100%;
+        /* background-color: var(--corAzulPrimaria); */
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        right: 1rem;
+        top: 1.315rem;
+    }
+
+    .navHamburger_ativacao[aria-expanded="true"] {
+        background: url(./_imagens_padroesWEB_siteSVU/menuHamburger_fecha.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .navLista {
+        position: sticky;
+        /* inset: 0 0 0 100%; */
+        background: blue;
+        height: 100vh;
+        flex-direction: column;
+        /* padding-top: 3rem; */
+        transform: translate(100%);
+    }
+
+    .navLista[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .navItens {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin: 0;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        font-size: 1.25rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .navLinks {
+        /* padding-left: 1.5rem;
+        padding-right: 1.5rem; */
+        margin: 0;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        font-size: 1.25rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .navDropdown {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .navDropdown .navLinks {
+        width: 100%;
+    }
+
+    .navLinks  div {
+        /* position: relative; */
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    /* .navItens_logo {
+        order: -3;
+    } */
+
+    .navItens:nth-of-type(6) {
+        padding: 0;
+        margin-bottom: 0;
+        border-top: 1px solid var(--corCinzaPrimaria);
+    }
+
+    .navItens_BotaoLogIn {
+        margin-left: 0rem;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        margin-top: 1rem;
+        /* order: -2; */
+    }
+
+    .botaoLogIn {
+        width: 100%;
+        background-color: transparent;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .navItens:last-of-type {
+        padding: 0;
+        margin: 0;
+    }
+
+    .navItens_botaoLogIn::before {
+        content: "";
+        display: flex;
+        flex-grow: 0  ;
+    }
+
+    .navItens_CriarConta {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        /* order: -1; */
+    }
+
+    .botaoCriarConta {
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+}

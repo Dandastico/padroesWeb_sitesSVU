@@ -42,3 +42,19 @@ window.onclick = function(event) {
       }
     }
   }
+
+  //MENU HAMBURGER
+  const navCelular = document.querySelector(".navLista");
+  const navHamburger = document.querySelector(".navHamburger_ativacao");
+
+  navHamburger.addEventListener('click', () => {
+    const visibility = navCelular.getAttribute("data-visible");
+    
+    if (visibility === "false") {
+      navCelular.setAttribute("data-visible", "true");
+      navHamburger.setAttribute("aria-expanded", "true");
+    } else if (visibility === "true")  {
+      navCelular.setAttribute("data-visible", "false");
+      navHamburger.setAttribute("aria-expanded", "false");
+    }
+  });
