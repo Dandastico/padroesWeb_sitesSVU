@@ -627,12 +627,35 @@ header.scrolled {
     flex-direction: column;
     background-color: var(--corCinzaSecundaria);
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    transform: translateY( 0rem );
+    transition: 0.2s ease-in-out;
 }
 
 
-.subGrid_atendimento:last-of-type {
+.subGrid_atendimento:last-of-type { /* ÚLTIMO QUADRADO DE FALE CONOSCO */
     grid-column: span 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.subGrid_atendimento:hover {
+    transform: translateY( -1.5rem );
+    transition: 0.2s ease-in-out;
+}
+
+.subGrid_iconMoldura_atendimento {
+    position: relative;
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.subGrid_iconMoldura_atendimento .subGrid_icon {
+    object-fit: scale-down;
+    position: relative;
+    width: 4.75rem;
+    margin-inline: 0;
 }
 
 .subGrid_atendimento .subGrid_tituloContainer {
@@ -640,18 +663,19 @@ header.scrolled {
     margin-bottom: 1rem;
 }
 
-.subGrid_tituloAtendimento {
-    font-size: 1rem;
+.subgridTitulo_atendimento {
+    font-size: 1.2rem;
     color: var(--corPreta);
 }
 
 .subGrid_atendimento .subGrid_paragrafoContainer {
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;;
 }
 
 .subGrid_atendimento .subGrid_paragrafoContainer > .paragrafoMain {
     text-align: left;
     margin-bottom: 0;
+    font-size: 1.2rem;
 }
 
 .subGrid_atendimento .subGrid_paragrafoContainer:last-of-type {
@@ -670,6 +694,7 @@ header.scrolled {
     position: relative;
 }
 
+
 .subGrid_listaAtendimento li {
     font-size: 1.2rem;
     font-weight: 700;
@@ -680,6 +705,29 @@ header.scrolled {
 .subGrid_listaAtendimento li.diaAtendimento {
     font-weight: 400;
     color: var(--corPreta);
+}
+
+.linkAtendimento_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+.linkAtendimento {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--corMagentaPrimaria);
+    position: relative;
+    text-align: right;
+    /* padding: 1.5rem 0; */
+}
+
+.linkAtendimento:hover {
+    text-decoration: underline; 
 }
 
 /* RODAPÉ */
