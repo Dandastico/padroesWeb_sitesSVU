@@ -735,6 +735,86 @@ header.scrolled {
     text-decoration: underline; 
 }
 
+/* PÁGINA CARTÃO DE VACINAÇÃO */
+/* CARTÃO DE VACINAÇÃO - TÍTULO E USUÁRIO */
+.inteiroContainer_cartaoVacina {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.inteiroContainer_cartaoVacina .tituloMain_esquerdo {
+    margin-bottom: 3%; 
+}
+
+.cartaoVac_usuario {
+    display: flex;
+    padding-right: 6rem;
+}
+
+.linkAlterarUsuario {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+}
+
+.navSetinha_cinza {
+    width: 0.75rem;
+    margin-right: 0.75rem;
+    aspect-ratio: 1;
+}
+
+.nomeUsuario {
+    font-size: 2rem;
+    white-space: nowrap;
+    color: var(--corAmarelaPrimaria);
+    /* text-decoration: underline; */
+}
+
+.fotoUsuario_cartaoVac {
+    width: 4rem;
+    aspect-ratio: 1;
+    margin-left: 1rem;
+}
+
+/* CARTÃO DE VACINÇÃO - FILTROS */
+.bordaTopo {
+    border-top: 1px solid var(--corCinzaPrimaria);
+}
+
+.cartaoVac_status {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.statusVacina_link {
+    display: flex;
+    text-decoration: none;
+    padding: 1rem 0;
+    color: var(--corPreta);
+}
+
+.statusVacina_link:hover {
+    color: var(--corAzulPrimaria);
+}
+
+.statusVacina_imagem {
+    width: 1rem;
+    aspect-ratio: 1;
+    margin-right: 0.5rem;
+}
+
+.statusVacina_link span {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 /* RODAPÉ */
 footer {
     background-color: var(--corPreta);
