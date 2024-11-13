@@ -10,38 +10,73 @@ document.addEventListener('scroll', () => {
 
 //FUNÇÃO DO DROPDOWN
 function navDropdown_buttonVac() {
-    document.getElementById("navDropdown_containerVac").classList.toggle("show")
+    document.getElementById("navDropdown_containerVac").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-    if (!event.target.matches('.navDropdown_btnVac')) {
-      var dropdowns = document.getElementsByClassName("navDropdown_containerVac");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-
-  function navDropdown_buttonFale() {
-    document.getElementById("navDropdown_containerFale").classList.toggle("show")
+function navDropdown_buttonFale() {
+  document.getElementById("navDropdown_containerFale").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-    if (!event.target.matches('.navDropdown_btnFale')) {
-      var dropdowns = document.getElementsByClassName("navDropdown_containerFale");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+
+
+//JEITO ANTIGO DE CRIAR O MENU DROPDOWN ABAIXO!!!
+// window.onclick = function(event) {
+//     if (!event.target.matches('.navDropdown_btnVac')) {
+//       var dropdowns = document.getElementsByClassName("navDropdown_containerVac");
+//       var i;
+//       for (i = 0; i < dropdowns.length; i++) {
+//         var openDropdown = dropdowns[i];
+//         if (openDropdown.classList.contains('show')) {
+//           openDropdown.classList.remove('show');
+//         }
+//       }
+//     }
+//   }
+
+// window.onclick = function(event) {
+//     if (!event.target.matches('.navDropdown_btnFale')) {
+//       var dropdowns = document.getElementsByClassName("navDropdown_containerFale");
+//       var i;
+//       for (i = 0; i < dropdowns.length; i++) {
+//         var openDropdown = dropdowns[i];
+//         if (openDropdown.classList.contains('show')) {
+//           openDropdown.classList.remove('show');
+//         }
+//       }
+//     }
+//   }
+
+  // function navDropdown_buttonInvisivel() {
+  //   document.getElementById("navDropdown_containerInvisivel").classList.toggle("show");
+  // } //A PARTIR DESSA FUNÇÃO É UM DROPDOWN QUE NÃO EXISTE MAS QUE POR ALGUM MOTIVO CONSERTA BUGS
+
+  // window.onclick = function(event) {
+  //   if (!event.target.matches('.navDropdown_invisivel')) {
+  //     var dropdowns = document.getElementsByClassName("navDropdown_containerInvisivel");
+  //     var i;
+  //     for (i = 0; i < dropdowns.lenfth; i++) {
+  //       var openDropdown = dropdowns[i];
+  //       if (openDropdown.classList.contains('show')) {
+  //         openDropdown.classList.remove('show');
+  //       }
+  //     }
+  //   }
+  // }
+
+  //CLICAR FORA DO DROPDOWN FECHA OS PARANAUÊ
+
+  // const menuBtn_vacina = document.querySelector('navDropdown_btnVac');
+  // const dropdown_vacina = document.querySelector('navDropdown_containerVac');
+
+  // menuBtn_vacina.addEventListener('click' , () => {
+  //   dropdown_vacina = toggle('hide')
+  // })
+
+  // document.addEventListener('click' , (e) => {
+  //   if (!dropdown_vacina.contains(e.target)) {
+  //     dropdown_vacina = add('hide');
+  //   }
+  // })
 
   //MENU HAMBURGER
   const navCelular = document.querySelector(".navLista");
