@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-slace=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./00_estilo_padroesWEB_siteSVU.css" />
         <title>SVU: Sistema de Vacina Único </title>
     </head>
@@ -13,9 +13,8 @@
             <button class="navHamburger_ativacao" aria-controls="navLista" aria-expanded="false">
 
             </button>
-
+            <!-- NAVEGAÇÃO - LAPTOP -->
             <nav class="navBarra paddingLateral_nav">
-                
                 <ul id="navLista" class="navLista" data-visible="false">
                     <!-- LOGOTIPO NA NAVEGAÇÃO -->
                     <li class="navItens navItens_logo">
@@ -26,7 +25,7 @@
                     <!-- VACINAS + DROPDOWN -->
                     <li class="navItens">
                         <div class="navDropdown">
-                            <a class="navLinks navDropdown_btnVac"  onclick="navDropdown_buttonVac()">
+                            <a id="navDropdown_btnVac" class="navLinks navDropdown_btnVac"  onclick="navDropdown_buttonVac()">
                                 <div>
                                     <span>Vacinas</span>
                                     <img class="navSetinha" src="https://i.imgur.com/QPXSXH7.png" />
