@@ -34,7 +34,7 @@ body {
     background-color: #fff;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     margin: 0;
     color: var(--corPreta), #000;
 }
@@ -747,7 +747,7 @@ header.scrolled {
 }
 
 .inteiroContainer_cartaoVacina .tituloMain_esquerdo {
-    margin-bottom: 3%; 
+    margin-bottom: 3rem; 
 }
 
 .cartaoVac_usuario {
@@ -769,7 +769,7 @@ header.scrolled {
 }
 
 .nomeUsuario {
-    font-size: 2rem;
+    font-size: 1.75rem;
     white-space: nowrap;
     color: var(--corAmarelaPrimaria);
     /* text-decoration: underline; */
@@ -783,7 +783,7 @@ header.scrolled {
 
 /* CARTÃO DE VACINÇÃO - FILTROS */
 .bordaTopo {
-    border-top: 1px solid var(--corCinzaPrimaria);
+    border-top: 2px solid var(--corCinzaSecundaria);
 }
 
 .cartaoVac_status {
@@ -806,13 +806,183 @@ header.scrolled {
 
 .statusVacina_imagem {
     width: 1rem;
-    aspect-ratio: 1;
+    height: 1rem;
     margin-right: 0.5rem;
 }
 
 .statusVacina_link span {
     font-size: 1rem;
     font-weight: 700;
+}
+
+.container_formFiltroVac {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.formFiltro {
+    position:relative;
+    display:flex;
+    gap:2rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--corCinzaSecundaria);
+}
+
+.containerFiltro {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+}
+
+.containerFiltro label {
+    font-size: 1rem;
+    color: var(--corPreta);
+    margin-right: 0.75rem;
+}
+
+.containerFiltro input {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border: 1px solid var(--corCinzaPrimaria);
+    border-radius: 5px;
+}
+
+/* CARTÃO DE VACINAÇÃO - DOSES */
+.tituloDoses_cartaoVac {
+    font-size: 1.75rem;
+    color: var(--corPreta);
+    margin-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--corCinzaSecundaria);
+}
+
+.grid_cartaoVac {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cartaoVacina_link {
+    text-decoration: none;
+    color: var(--corPreta);
+}
+
+.subGrid_cartaoVac {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    background-color: var(--corCinzaSecundaria);
+    border: 1px solid var(--corCinzaSecundaria); 
+    border-radius: 10px;
+}
+
+.subGrid_cartaoVac:hover {
+    border: 1px solid var(--corCinzaPrimaria);
+}
+
+.statusVacData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.statusVacData small {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--corCinzaPrimaria);
+    text-transform: uppercase;
+}
+
+.cartaoVac_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 3.75rem;
+    justify-content: space-between;
+}
+
+.cartaoVac_indo h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--corPreta);
+}
+
+.cartaoVac_info small {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--corCinzaPrimaria);
+}
+
+/* CARTÃO DE VACINAÇÃO - PAGINAÇÃO E BOTÃO PARA IMPRIMIR */
+.inteiroContainer_paginasBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    width: 100%;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.cartaoVac_paginasContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.listaPaginas {
+    display: flex;
+    list-style: none;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.link_numeroPagina {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--corCinzaPrimaria);
+    font-weight: 700;
+}
+
+.link_numeroPagina:hover {
+    color: var(--corPreta);
+    text-decoration: underline;
+}
+
+.setaPagina_anterior {
+    height: 0.625rem;
+    width: auto;
+    transform: rotate(90deg);
+}
+
+.setaPagina_posterior {
+    height: 0.625rem;
+    width: auto;
+    transform: rotate(-90deg);
+}
+
+.cartaoVac_imprimir {
+    background-color: var(--corAzulPrimaria);
+    color: var(--corBranca);
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 1rem 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cartaoVac_imprimir:hover {
+    background-color: var(--corMagentaPrimaria);
 }
 
 /* RODAPÉ */
