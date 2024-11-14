@@ -18,7 +18,7 @@
                 <ul id="navLista" class="navLista" data-visible="false">
                     <!-- LOGOTIPO NA NAVEGAÇÃO -->
                     <li class="navItens navItens_logo">
-                        <a class="navLinks" href="https://dandastico.github.io/padroesWeb_sitesSVU/">
+                        <a class="navLinks" href="./index.html">
                             <img class="logo" src="https://i.imgur.com/QfdFTNr.png" alt="" />
                         </a>
                     </li>
@@ -143,39 +143,222 @@
                             </a>
                             <a class="statusVacina_link" href="">
                                 <img class="statusVacina_imagem" src="https://i.imgur.com/oyWysrH.png" />
-                                <span>Vacina nunca foi tomada ou não cadastrada</span>
+                                <span>Em falta ou não cadastrada</span>
                             </a>
-                        </div>
-                        <div class="filtro_cartaoVacina">
-                            <form>
-
-                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="container_formFiltroVac">
-                    <form>
-                        <label>
-                            Vacina
-                        </label>
-                        <input />
-                        <label>
-                            Vacina
-                        </label>
-                        <input />
-                        <label>
-                            Vacina
-                        </label>
-                        <input />
+                <div class="container_formFiltroVac paddingLateral">
+                    <form class="formFiltro">
+                        <div class="containerFiltro">
+                            <label for="searchVac">
+                                Vacina
+                            </label>
+                            <input type="search" id="searchVac" placeholder="Exemplo..." />
+                        </div>
+                        <div class="containerFiltro">
+                            <label for="searchLab">
+                                Laboratório
+                            </label>
+                            <input type="search" id="searchLab" placeholder="Exemplo..." />
+                        </div>
+                        <div class="containerFiltro">
+                            <label id="searchRoteiro">
+                                Roteiro
+                            </label>
+                            <input type="search" id="searchRoteiro" placeholder="Exemplo..." />
+                        </div>
                     </form>
-                    <button>
-                        Filtrar
-                    </button>
                 </div>
             </section>
         <!-- CARTÃO DE VACINAS -->
             <section>
-
+                <div class="inteiroContainer paddingLateral">
+                    <h3 class="tituloDoses_cartaoVac">
+                        Suas doses
+                    </h3>
+                </div>
+                <div class="grid_cartaoVac paddingLateral">
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/JHF3d3Z.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    COVID - 19 PFIZER - COMINARTY, RNAM
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/JHF3d3Z.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    COVID - 19 PFIZER - COMINARTY, RNAM
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/crcfnoT.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    COVID - 19 PFIZER - COMINARTY, RNAM
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/JHF3d3Z.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    Vacina COVID-19 SINOVAC/BUTANTAN - CORONAVAC, inativada
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/i0WX4bk.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    COVID - 19 PFIZER - COMINARTY, RNAM
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/oyWysrH.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    COVID - 19 PFIZER - COMINARTY, RNAM
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/oyWysrH.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    COVID - 19 PFIZER - COMINARTY, RNAM
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cartaoVacina_link" href="#" alt="">
+                        <div class="subGrid_cartaoVac">
+                            <div class="statusVacData">
+                                <img class="statusVacina_imagem" src="https://i.imgur.com/JHF3d3Z.png" alt="" />
+                                <small>
+                                    12/06/2023
+                                </small>
+                            </div>
+                            <div class="cartaoVac_info">
+                                <h4>
+                                    COVID - 19 PFIZER - COMINARTY, RNAM
+                                </h4>
+                                <small>
+                                    PFIZER
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        <!-- CARTÃO DE VACINAÇÃO - PAGINAÇÃO -->
+                <div class="inteiroContainer_paginasBtn paddingLateral">
+                    <div class="cartaoVac_paginasContainer">
+                        <div class="container_setaPaginas">
+                            <a class="link_setaPaginas" href="#">
+                                <img class="setaPagina_anterior" src="https://i.imgur.com/OWfhVbA.png" alt="" />
+                            </a>
+                        </div>
+                        <ul class="listaPaginas">
+                            <li>
+                                <a class="link_numeroPagina" href="#">
+                                    1
+                                </a>
+                            </li>
+                            <li>
+                                <a class="link_numeroPagina" href="#">
+                                    2
+                                </a>
+                            </li>
+                            <li>
+                                <a class="link_numeroPagina" href="#">
+                                    3
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="container_setaPaginas">
+                            <a class="setaPaginas" href="#">
+                                <img class="setaPagina_posterior" src="https://i.imgur.com/OWfhVbA.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <button class="cartaoVac_imprimir" type="button" onclick="">
+                        Imprimir Cartão
+                    </button>
+                </div>
             </section>
         </main>     
         <!--RODAPÉ-->
@@ -306,7 +489,7 @@
 
         <!-- JAVASCRIPT -->
         <script src="./00_javaScript_padroesWeb_siteSVU.js"></script>
-        <!-- JAVASCRIPT DOS ÍCONES -->
+        <!-- JAVASCRIPT DOS ÍCONES DAS REDES SOCIAIS -->
         <script src="https://kit.fontawesome.com/d98fb0a598.js" crossorigin="anonymous"></script>
         
     </body>
