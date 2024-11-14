@@ -154,7 +154,7 @@
                             <input type="text" id="cpfPaciente" name="cpfPaciente" />
                         </div>
                     </div>
-                    <h3 class="tituloSecao">
+                    <h3 class="form_tituloSecao">
                         Contato
                     </h3>
                     <p class="tituloSecao_explicado">
@@ -173,6 +173,36 @@
                             </label>
                             <input type="tel" id="telefonePaciente" name="telefonePaciente" />
                         </div>
+                    </div>
+                    <div class="container_formLocal">
+                        <h3 class="form_tituloSecao">
+                            Local
+                        </h3>
+                        <div class="container_formRegiao">
+                            <label for="regiao" class="rotuloInput">
+                                Região Administrativa
+                            </label>
+                            <input type="search" id="regiao" name="regiao" />
+                        </div>
+                        <div class="container_formPosto">
+                            <label for="postoSUS" class="rotuloInput">
+                                Unidade SUS
+                            </label>
+                            <input type="search" id="postoSUS" name="postoSUS" />
+                        </div>
+                        <!-- GOOGLE MAPS -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30708.0118748962!2d-47.91009281524729!3d-15.830218856296415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sposto%20de%20saude%20sus!5e0!3m2!1spt-BR!2sbr!4v1731581489177!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="container_formVacinaDesejada">
+                        <label id="vacinaDesejada" class="rotuloInput">
+                            Qual vacina 
+                        </label>
+                        <select id="vacinaDesejada" name="vacinaDesejada" class="form_vacinaDesejada">
+                            <option value="" disabled selected>Escolha a vacina desejada</option>
+                            <option value="covid">COVID</option>
+                            <option value="hepatite">Hepatite</option>
+                            <option value="poliomielite">Poliomielite</option>
+                        </select>
                     </div>
                 </form>
             </section>
