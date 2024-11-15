@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ SVU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./00_estilo_faq_padroesWEB_siteSVU_filipe.css">
+    <link rel="stylesheet" href="./00_estilo_padroesWEB_siteSVU.css" />
+</head>
+<body>
+    <header class="navContainer">
+        <!-- NAVEGAÇÃO - LAPTOP -->
+        <nav class="navBarra paddingLateral_nav">
+            <ul id="navLista" class="navLista" data-visible="false">
+                <!-- LOGOTIPO NA NAVEGAÇÃO -->
+                <li class="navItens navItens_logo">
+                    <a class="navLinks" href="./index.html">
+                        <img class="logo" src="https://i.imgur.com/QfdFTNr.png" alt="" />
+                    </a>
+                </li>
+                <!-- VACINAS + DROPDOWN -->
+                <li class="navItens">
+                    <div class="navDropdown">
+                        <a id="navDropdown_btnVac" class="navLinks navDropdown_btnVac"  onclick="navDropdown_buttonVac()">
+                            <div>
+                                <span>Vacinas</span>
+                                <img class="navSetinha" src="https://i.imgur.com/QPXSXH7.png" />
+                            </div>
+                        </a>
+                        <div id="navDropdown_containerVac" class="navDropdown_containerVac">
+                            <ul class="navDropdown_lista">
+                                <li class="navDropdown_itens">
+                                    <a class="navDropdown_links" href="./03_preAgendamento_padroesWeb_siteSVU.html">
+                                        Pré-Agendamento
+                                    </a>
+                                </li>
+                                <li class="navDropdown_itens">
+                                    <a class="navDropdown_links" href="./02_cartaoVac_padroesWeb_siteSVU.html">
+                                        Cartão de Vacina
+                                    </a>
+                                </li>
+                                <li class="navDropdown_itens">
+                                    <a class="navDropdown_links" href="#">
+                                        Informações Sobre Vacinas
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- UNIDADES -->
+                <li class="navItens">
+                    <a class="navLinks" href="#">
+                        Unidades
+                    </a> 
+                </li>
+                <!-- NOTÍCIAS -->
+                <li class="navItens">
+                    <a class="navLinks" href="#">
+                        Notícias
+                    </a> 
+                </li>
+                <!-- FALE CONOSCO + DROPDOWN -->
+                <li class="navItens">
+                    <div class="navDropdown">
+                        <a class="navLinks navDropdown_btnFale"  onclick="navDropdown_buttonFale()">
+                            <div>
+                                <span>Fale Conosco</span>
+                                <img class="navSetinha" src="https://i.imgur.com/QPXSXH7.png" />
+                            </div>
+                        </a>
+                        <div id="navDropdown_containerFale" class="navDropdown_containerFale">
+                            <ul class="navDropdown_lista">
+                                <li class="navDropdown_itens">
+                                    <a class="navDropdown_links" href="./05_faq_padroesWeb_siteSVU_filipe.html">
+                                        Perguntas Frequentes
+                                    </a>
+                                </li>
+                                <li class="navDropdown_itens">
+                                    <a class="navDropdown_links" href="./06_faleConosco_padroesWeb_siteSVU_lucas.html">
+                                        Fale com o SVU
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- BOTÃO LOG-IN -->
+                <li class="navItens navItens_BotaoLogIn">
+                    <a class="navLinks botaoLogIn" href="#">
+                        Entrar
+                    </a> 
+                </li>
+                <!-- BOTÃO CRIAR CONTA -->
+                <li class="navItens navItens_CriarConta">
+                    <a class="navLinks botaoCriarConta" href="#">
+                        Criar conta
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span> O que é SVU ?</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>somos um sistema que auxilia você e sua família a manter sua caderneta
+                        de vacinas sempre atualizado.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span> Vacinas causam autismo?</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>Não. Essa informação foi divulgada por um estudo publicado em 1998, motivado por interesses
+                        comerciais
+                        e sem evidências consistentes.
+                        Inúmeras pesquisas atuais comprovam que não há ligação entre vacinas e o autismo/transtornos
+                        autistas.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span> Vacinas causam a doença?</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>Não. As vacinas possuem os mesmos componentes que causam a doença,
+                        mas são enfraquecidos ou mortos. Assim, estimulam nosso corpo a produzir anticorpos e nos trazer
+                        imunidade.
+                        As reações adversas temporárias que algumas pessoas podem sentir após a vacinação,
+                        como braço dolorido e febre ligeira, são apenas um sinal de que o sistema imunológico está
+                        funcionando.</p>
+                </div>
+
+            </div>
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span> Por que devemos tomar a vacina da gripe todos os anos?</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>Devido às mutações genéticas pelas quais o vírus passa ao longo do tempo,
+                        o nosso sistema imune não reconhece o vírus modificado e, assim, não temos defesa contra ele. Todos
+                        os anos uma nova vacina é produzida considerando as novas variantes que mais causaram infecção em
+                        todo o mundo,
+                        como a variante Darwin da cepa H3N2, por exemplo.</p>
+                </div>
+            </div>
+            <div class="accordion">
+
+                <button class="accordion-header">
+                    <span> Vacinas são seguras?</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>Todas as vacinas passam por um processo de aprovação antes de serem utilizadas nos serviços de saúde.
+                        Durante o desenvolvimento, precisam passar por todas as fases
+                        recomendadas pela Organização Mundial da Saúde e pela Agência Nacional de Vigilância Sanitária,
+                        com testes e estudos que garantam a segurança e eficácia das doses.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span> Para quem a vacina da gripe é recomendada?</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>A vacina é indicada a todos os adultos, adolescentes, 
+                        idosos e crianças a partir dos 6 meses de idade (sobretudo, acima dos 5 anos).
+                        Também é recomendada para pessoas de risco clínico e portadores de comorbidades
+                        – Doenças crônicas: respiratórias, cardíaca, renal, neurológica; Diabetes mellitus tipo I e II;
+                        Imunossupressão; Imunodeficiência;
+                        Transplantados (órgãos sólidos e medula óssea) e portadores de trissomias.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span> Já tive ou estou com Covid-19. Devo ser vacinado?</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>Como a duração da proteção gerada pela própria doença é desconhecida e por existir a possibilidade de reinfecção,
+                        ainda que rara, a vacinação é indicada independentemente de histórico de doença ou infecção pelo SARS-CoV-2.
+                        Contudo, para vacinar é necessário aguardar no mínimo quatro semanas após o início dos
+                        sintomas ou do primeiro resultado positivo no exame RT-PCR.</p>
+                        <p> Sociedade Brasileira de Imunização – SBIm</p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- LOGOTIPO E REDES SOCIAIS RODAPÉ -->
+        <div class="footerLogoSocial">
+            <div class="footerLogo">
+                <img class="footerLogo_img" src="https://i.imgur.com/UKIW3UC.png" alt="Logotipo do SVU branca" />
+            </div>
+            <div class="footerSocial">
+                <ul>
+                    <li>
+                        <a class="footerIcons fa fa-facebook" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="footerIcons fa fa-instagram" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="footerIcons fa-brands fa-bluesky" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="footerIcons fa fa-youtube" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- LINKS DE NAVEGAÇÃO NO RODAPÉ -->
+        <div class="footerGrid">
+            <div class="footerGrid_sub">
+                <h3 class="footerTitulo">
+                    Vacinas
+                </h3>
+                <ul class="footerLista">
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="./03_preAgendamento_padroesWeb_siteSVU.html">
+                            Pré-Agendamento
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="./02_cartaoVac_padroesWeb_siteSVU.html">
+                            Cartão de Vacinas
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Informações sobre Vacinas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerGrid_sub">
+                <h3 class="footerTitulo">
+                    Central de Atendimento
+                </h3>
+                <ul class="footerLista">
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Unidades
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Atendimento Digital
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Atendimento à Empresas
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="./05_faq_padroesWeb_siteSVU_filipe.html">
+                            Perguntas Frequentes
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="./06_faleConosco_padroesWeb_siteSVU_lucas.html">
+                            Fale Conosco
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerGrid_sub">
+                <h3 class="footerTitulo">
+                    O Sistema de Vacina Único
+                </h3>
+                <ul class="footerLista">
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Quem Somos
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Política de Privacidade
+                        </a>
+                    </li>
+                    <li class="footerLista_itens">
+                        <a class="footerLink" href="#">
+                            Trabalhe Conosco
+                        </a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+        <!-- APP STORE -->
+        <div class="footerBaixeApp">
+            <div class="footerBaixeApp_wrap">
+                <h3 class="footerTitulo">
+                    Baixe nosso aplicativo
+                </h3>
+                <a class="footerBaixeApp_link" href="#">
+                    <i class="fa-brands fa-google-play"></i>
+                    <span>Google Store</span>
+                </a>
+                <a class="footerBaixeApp_link" href="#">
+                    <i class="fa-brands fa-app-store"></i>
+                    <span>App Store</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT DO ACORDEÃO - FILIPE -->
+    <script src="./00_javaScript-faq_padroesWeb_siteSVU_filipe.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="./00_javaScript_padroesWeb_siteSVU.js"></script>
+    <!-- JAVASCRIPT DOS ÍCONES DAS REDES SOCIAIS -->
+    <script src="https://kit.fontawesome.com/d98fb0a598.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
