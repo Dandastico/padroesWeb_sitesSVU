@@ -26,12 +26,12 @@
 html {
     font-family: "Roboto", sans-serif;
     display: block;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
-    background-color: #fff;
+    background-color: var(--corBranca);
 }
 
 h1, h2, h3, h4, p {
@@ -1027,15 +1027,15 @@ header.scrolled {
 .form_preAtendimento {
     margin-inline: 20rem;
     margin-bottom: 6rem;
-    padding: 1.5rem 2rem 1.5rem;
-    border: 0.2rem solid var(--corCinzaSecundaria);
-    border-radius: 1rem;
+    padding: 1.5rem 1.75rem 1.5rem;
+    border-top: 0.2rem solid var(--corCinzaSecundaria);
+    /* border-radius: 1rem; */
 }
 
 .form_tituloSecao {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--corPreta);
+    color: var(--corMagentaPrimaria);
 }
 
 .container_formFlexRow {
@@ -1091,6 +1091,8 @@ header.scrolled {
 
 .inputBordaChique:focus {
     outline: none;
+    border-color: var(--corAzulPrimaria);
+    color: var(--corAzulPrimaria);
 }
 
 .container_inputColumn {
