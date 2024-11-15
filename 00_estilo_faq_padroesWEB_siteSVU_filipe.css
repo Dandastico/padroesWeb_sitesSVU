@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --corPreta: #141821;
+  --corBranca: #fff;
+  --corAzulPrimaria: #008FFB;
+  --corVerdePrimaria: #2F887C;
+  --corAmarelaPrimaria: #ffc636;
+  --corMagentaPrimaria: #FF4E79;
+  --corCinzaPrimaria: #697078;
+  --corCinzaSecundaria: #EEEFF0;
+  --corAzulSecundaria: #CCE9FE;
+  --corVerdeSecundaria: #EBF7ED;
+  --corAmarelaSecundaria: #FFF4D7;
+  --corMagentaSecundaria: #FFDCE4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  /* COMENTEI O DISPLAY E OS ALINHAMENTOS ORA NÃO INTERAGIR COM O FOOTER E NAV, VOU JOGAR O ALINHAMENTO NO DIV - DANIEL FERREIRA */
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: var(--corCinzaSecundaria) !important;
+  
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto; /* CENTRALIZA O CONTAINER - DANIEL FERREIRA */
+  gap: 8px;
+  width: 500px;
+
+  /* AUMENTAR DISTÂNCIA DA NAVEGAÇÃO E DO RODAPÉ - DANIEL FERREIRA */
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.accordion{
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.accordion-header{
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  cursor: pointer;
+}
+.accordion-body{
+  color: var(--corCinzaPrimaria);
+  font-size: 14px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity .3s;
+}
+.accordion-body.active{
+  height: 100%;
+  opacity: 1;
+  padding: 5px 0px;
+}
+.arrow {
+  transition: transform .2s linear;
+}
+.accordion:has(.active) .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* NAVEGAÇÃO - DANIEL FERREIRA */
+.navContainer {
+  background-color: var(--corCinzaSecundaria);
+  display: block;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  position: sticky; /* AcCOMPANHA POR TODO O SITE */
+  top: 0px;
+  z-index: 1;
+  transition: background-color 0.4s ease-in-out;
+}
+
+header.scrolled {
+  background-color: var(--corBranca);
+  box-shadow: 0 0 1rem 0 rgba(105, 112, 120, 0.4);
+}
+
+.navBarra {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
+}
+
+.navHamburger_ativacao {
+  display: hidden;
+  z-index: 100;
+  border: 0;
+  position: absolute;
+}
+
+.navLista {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  
+}
+
+.navItens {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  flex-direction: column;
+  position: relative;
+}
+
+
+  /* LOGOTIPO NA NAVEGAÇÃO */
+.logo {
+  height: 27px;
+  margin-left: 0px !important;
+}
+
+.navItens_logo {
+  margin-right: 0.75rem !important;
+  margin-left: 0 !important;
+  flex-direction: column;
+  position: relative;
+}
+
+  /* LINKS NA NAVEGAÇÃO */
+.navLinks {
+  border: none;
+  padding: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+  color: var(--corPreta);
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.navLinks:hover {
+  color: var(--corAzulPrimaria);
+}
+
+  /* SETAS E MENU DROPDOWN */
+.navLinks div {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navSetinha {
+  width: 0.75rem;
+  margin-left: 0.3125rem;
+}
+
+.navDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.navDropdown_containerVac, .navDropdown_containerFale {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  background-color: var(--corBranca);
+  box-shadow: 0px 8px 16px 0px rgba(105, 112, 120, 0.2);
+  white-space: nowrap; /* IMPEDE A QUEBRA DE LINHA DOS LINKS */
+  border-top: 3px solid var(--corAzulPrimaria);
+}
+
+.show {
+  display: block; /* CLASSE SERÁ ADICIONA COM JAVASCRIPT EM NAVDROPDOWN_CONTAINER */
+}
+
+.navDropdown_lista {
+  padding: 0.75rem 0px;
+  margin: 0;
+  align-items: center;
+  display: list-item;
+  list-style: none;
+  width: 100%;
+}
+
+.navDropdown_links {
+  border: none;
+  color: var(--corPreta);
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1px;
+  padding: 1rem 0px;
+}
+
+.navDropdown_links:hover {
+  color: var(--corAzulPrimaria)
+}
+
+  /* BOTÕES NA NAVEGAÇÃO */
+.navItens_BotaoLogIn {
+  margin-left: auto;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.navItens_botaoLogIn::before {
+  content: "";
+  display: flex;
+  flex-grow: 1;
+}
+
+.botaoLogIn {
+  background-color: var(--corCinzaSecundaria);
+  color: var(--corPreta);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.botaoLogIn:hover {
+  background-color: rgba(105, 112, 120, 20%);
+  color: var(--corPreta);
+}
+
+.navItens_CriarConta {
+  margin-right: 0 !important;
+}
+
+.botaoCriarConta {
+  background-color: var(--corAzulPrimaria);
+  color: var(--corBranca) !important;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.botaoCriarConta:hover {
+  background-color: var(--corMagentaPrimaria);
+}
+
+/* RODAPÉ - DANIEL FERREIRA */
+footer {
+  background-color: var(--corPreta);
+}
+
+.footerGrid {
+  padding: 2rem 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.footerGrid_sub {
+  grid-column-end: span 4;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: min-content;
+}
+
+.footerTitulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--corAzulPrimaria);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.footerLista {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: block;  
+}
+
+.footerLista_itens {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.footerLink {
+  color: var(--corBranca);
+  padding: 0;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: var(--corMagentaPrimaria);
+  font-weight: 600;
+}
+
+  /* RODAPÉ - ÍCONES DE REDES SOCIAIS */
+.footerLogoSocial{
+  position: relative;
+  display: flex;
+  padding: 4rem 6rem 0;
+}
+
+.footerLogo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.footerLogo_img {
+  height: 27px;
+  position: relative;
+}
+
+.footerSocial {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+
+.footerSocial ul {
+  list-style-type: none;
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.footerSocial ul li {
+  display: inline-block;
+}
+
+.footerIcons {
+  color: var(--corBranca);
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.footerIcons:hover {
+  color: var(--corMagentaPrimaria);
+}
+
+  /* RODAPÉ - BAIXE NOSSO APP */
+.footerBaixeApp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 6rem 6rem;
+}
+
+.footerBaixeApp_wrap {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items:flex-end;
+}
+
+.footerBaixeApp .footerTitulo {
+  display: block;
+  color: var(--corAzulPrimaria);
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.footerBaixeApp_link {
+  background-color: var(--corMagentaPrimaria);
+  color: var(--corBranca);
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-left: 1.5rem;
+}
+
+.footerBaixeApp_link:hover {
+  font-weight: 600;
+}
+
+.footerBaixeApp_link span {
+  margin-left: 0.2rem;
+}
+
+/* MARGENS LATERAIS E SUAS RESPONSIVIDADE */
+.paddingLateral {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.paddingLateral_nav {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
