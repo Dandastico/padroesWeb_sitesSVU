@@ -9,24 +9,30 @@
     <body>
         <!--NAVEGAÇÃO-->
         <header class="navContainer">
-            <nav class="navBarra">
-                <ul class="navLista">
+
+            <button class="navHamburger_ativacao" aria-controls="navLista" aria-expanded="false">
+
+            </button>
+
+            <nav class="navBarra paddingLateral_nav">
+                
+                <ul id="navLista" class="navLista" data-visible="false">
                     <!-- LOGOTIPO NA NAVEGAÇÃO -->
-                    <li class="navItens navItens_Logo">
+                    <li class="navItens navItens_logo">
                         <a class="navLinks" href="#">
                             <img class="logo" src="./_imagens_padroesWEB_siteSVU/_logo_svu_horizontal.png" alt="" />
                         </a>
                     </li>
-                    <!-- VACINAS -->
+                    <!-- VACINAS + DROPDOWN -->
                     <li class="navItens">
                         <div class="navDropdown">
-                            <a class="navLinks navDropdown_btn"  onclick="navDropdown_button()">
+                            <a class="navLinks navDropdown_btnVac"  onclick="navDropdown_buttonVac()">
                                 <div>
                                     <span>Vacinas</span>
                                     <img class="navSetinha" src="./_imagens_padroesWEB_siteSVU/_seta_nav.png" />
                                 </div>
                             </a>
-                            <div id="navDropdown_container" class="navDropdown_container">
+                            <div id="navDropdown_containerVac" class="navDropdown_containerVac">
                                 <ul class="navDropdown_lista">
                                     <li class="navDropdown_itens">
                                         <a class="navDropdown_links" href="#">
@@ -38,13 +44,6 @@
                                             Cartão de Vacina
                                         </a>
                                     </li>
-                                    <!--
-                                    <li class="navDropdown_itens">
-                                        <a class="navDropdown_links" href="#">
-                                            Roteiro das Vacinas
-                                        </a>
-                                    </li>
-                                    -->
                                     <li class="navDropdown_itens">
                                         <a class="navDropdown_links" href="#">
                                             Informações Sobre Vacinas
@@ -66,11 +65,30 @@
                             Notícias
                         </a> 
                     </li>
-                    <!-- FALE CONOSCO -->
+                    <!-- FALE CONOSCO + DROPDOWN -->
                     <li class="navItens">
-                        <a class="navLinks" href="#">
-                            Fale conosco
-                        </a> 
+                        <div class="navDropdown">
+                            <a class="navLinks navDropdown_btnFale"  onclick="navDropdown_buttonFale()">
+                                <div>
+                                    <span>Fale Conosco</span>
+                                    <img class="navSetinha" src="./_imagens_padroesWEB_siteSVU/seta_nav.png" />
+                                </div>
+                            </a>
+                            <div id="navDropdown_containerFale" class="navDropdown_containerFale">
+                                <ul class="navDropdown_lista">
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Perguntas Frequentes
+                                        </a>
+                                    </li>
+                                    <li class="navDropdown_itens">
+                                        <a class="navDropdown_links" href="#">
+                                            Fale com o SVU
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <!-- BOTÃO LOG-IN -->
                     <li class="navItens navItens_BotaoLogIn">
@@ -93,23 +111,22 @@
                 <div class="heroIndex">
                     <!-- IMAGEM NO BANNER INICIAL -->
                     <div class="heroIndex_imagemContainer">
-                        <div>
-                            <img class="heroIndex_imagem" src="./_imagens_padroesWEB_siteSVU/_imagemHeroVacina_editado2.jpg" alt="" />
-                        </div>
+                        <img class="heroIndex_imagem" src="./_imagens_padroesWEB_siteSVU/imagem_hero_vacina_cortada.png" alt="" />
                     </div> 
-                    <!-- CONTEÚDO ESCRITO DO BANNER INICIAL --> 
-                    <div class="heroIndex_conteudo">
-                        <h1>
-                            Tudo sobre vacinas
-                            <br />
-                            em um só lugar:
-                        </h1>
-                        <span class="heroIndex_slogan">
-                            Sem confusão, sem desinformação
-                        </span>
-                        <!-- <p>
-                            O melhor momento para se defender é agora
-                        </p> -->
+                    <!-- CONTEÚDO ESCRITO DO BANNER INICIAL -->
+                    
+                    <div class="heroIndex_conteudo paddingLateral_heroForm">
+                        <div class="heroIndex_conteudoTitulo">
+                            <h1>
+                                Tudo sobre
+                                vacinas em 
+                                um só lugar
+                            </h1>
+                            <span class="heroIndex_slogan">
+                                Sem confusão,
+                                sem desinformação
+                            </span>
+                        </div>
                         <div class="formContainer">
                             <h2 class="formTitulo">
                                 Se inscreva ao SVU e se proteja melhor
@@ -139,17 +156,134 @@
                 </div>
             </section>
 
-            <!--NOTÍCIAS-->
-            <section>
-
+            <!--PRIMEIRO PITCH-->
+            <section class="sectionMain_margemTopo">
+                <div class="containerMain paddingLateral">
+                    <div class="conteudoMetade">
+                        <h2 class="tituloMain">
+                            Rastreie, gerencie e informe-se sobre todas suas vacinas
+                        </h2>
+                        <p class="paragrafoMain">
+                            Nunca mais se preocupe com seu cartão de vacina, procurar se todas estão em dias e quais você tem o direito. Agora está nas nossas mãos!
+                        </p>
+                        <p class="paragrafoMain">
+                            Ao se inscrever no SVu você terá acesso ao todo seu histórico de vacinação com apenas um clique.
+                        </p>
+                    </div>
+                    <div class="imagemMetade">
+                        <div class="imagemMetade_moldura">
+                            <img class="imagemMetade_voFeliz" src="./_imagens_padroesWEB_siteSVU/2024.11_padroesWeb_siteSVU_ilustra_voFeliz.png" alt="Uma mulher com idade mais avançada feliz com ícones de dispositivos tecnológicos em volta dela" />
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!--SERVIÇOS EM DESTAQUE-->
-            <section>
-
+            <!--SEGUNDO PITCH-->
+            <section class="sectionMain">
+                <div class="inteiroContainer">
+                    <h2 class="tituloMain_centro">
+                        Proteja quem você ama
+                    </h2>
+                    <p class="subtituloMain_centro">
+                        Acompanhe o cartão de vacina de parentes e amigos
+                    </p>
+                    <div class="containerMain paddingLateral">
+                        <div class="imagemMetade">
+                            <div class="imagemMetade_moldura">
+                                <img class="imagemMetade_acompanhe" src="./_imagens_padroesWEB_siteSVU/2024.11_padroesWeb_siteSVU_ilustra_acompanhe.png" alt="Imagem com 3 pessoas sorrindo com suas informações salvas no mesmo site" />
+                            </div>
+                        </div>
+                        <div class="conteudoMetade_direito">
+                            <p class="paragrafoMain">
+                                Sincronize seu perfil com os de quem você quer proteger, assim será possível verificar as vacinas e suas informações de quem você ama!
+                            </p>
+                            <p class="paragrafoMain">
+                                Ao sincronizar seu perfil com o GOV.BR, seus dados sobre suas vacinas e as de seus parentes em primeiro grau serão automaticamente atualizados.*
+                            </p>
+                            <small>
+                                *Sincronização de parentes deve ser permitida pelo GOV.BR, a não ser de filhas e filhos com menos de 18 anos.
+                            </small>
+                            <button class="btnMain" type="submit">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </main>
-        
+
+            <!-- COMO FUNCIONA -->
+             <section class="sectionMain sectionMain_cinza">
+                <div class="containerMain paddingLateral columnEmergencial">
+                    <div class="containerTitulo_grid">
+                        <h2 class="tituloMain_centro">
+                            Como funciona
+                        </h2>
+                    </div>
+                    <div class="containerGrid_comoFunciona">
+                        <div class="subGrid_comoFunciona">
+                            <div class="subGrid_iconMoldura">
+                                <img class="subGrid_icon" src="./_imagens_padroesWEB_siteSVU/2024.11_padroesWeb_siteSVU_icone_laptop.png" alt="Ilustração de um laptop" />
+                            </div>
+                            <div class="subGrid_tituloContainer">
+                                <h3 class="subGrid_titulo">
+                                    Crie sua conta
+                                </h3>
+                            </div>
+                            <div class="subGrid_paragrafoContainer">
+                                <p class="paragrafoMain">
+                                    Se inscrever é um processo rápido e fluido. Pediremos algumas informações para melhor te atendermos 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="subGrid_comoFunciona">
+                            <div class="subGrid_iconMoldura">
+                                <img class="subGrid_icon" src="./_imagens_padroesWEB_siteSVU/2024.11_padroesWeb_siteSVU_icone_carregando.png" alt="Ilustração de uma página de internet" />
+                            </div>
+                            <div class="subGrid_tituloContainer">
+                                <h3 class="subGrid_titulo">
+                                    Atualize sua conta
+                                </h3>
+                            </div>
+                            <div class="subGrid_paragrafoContainer">
+                                <p class="paragrafoMain">
+                                    Digite as informações sobre suas vacinas e/ou sincronize sua conta ao GOV.BR e outras clínicas para para atualizar seu perfil
+                                </p>
+                            </div>
+                        </div>
+                        <div class="subGrid_comoFunciona">
+                            <div class="subGrid_iconMoldura">
+                                <img class="subGrid_icon" src="./_imagens_padroesWEB_siteSVU/2024.11_padroesWeb_siteSVU_icone_calendario.png" alt="Ilustração de um calendário" />
+                            </div>
+                            <div class="subGrid_tituloContainer">
+                                <h3 class="subGrid_titulo">
+                                    Verifique se as vacinas estão em dia
+                                </h3>
+                            </div>
+                            <div class="subGrid_paragrafoContainer">
+                                <p class="paragrafoMain">
+                                    Confira seu cartão de vacina para saber quais vacinas estão vencidas ou prestes a vencer
+                                </p>
+                            </div>
+                        </div>
+                        <div class="subGrid_comoFunciona">
+                            <div class="subGrid_iconMoldura">
+                                <img class="subGrid_icon" src="./_imagens_padroesWEB_siteSVU/2024.11_padroesWeb_siteSVU_icone_gps.png" alt="Ilustração de um símbolo que significa GPS" />
+                            </div>
+                            <div class="subGrid_tituloContainer">
+                                <h3 class="subGrid_titulo">
+                                    Visite o posto de saúde mais próximo
+                                </h3>
+                            </div>
+                            <div class="subGrid_paragrafoContainer">
+                                <p class="paragrafoMain">
+                                    Agora que você sabe quais vacinas são necessárias tomar, veja qual posto de saúde é o mais acessível para receber a proteção da qual você tem direito
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+        </main>     
         <!--RODAPÉ-->
         <footer>
             <!-- LOGOTIPO E REDES SOCIAIS RODAPÉ -->
@@ -199,68 +333,64 @@
                     </ul>
                 </div>
                 <div class="footerGrid_sub">
-                    <div class="footerGrid_sub">
-                        <h3 class="footerTitulo">
-                            Central de Atendimento
-                        </h3>
-                        <ul class="footerLista">
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Unidades
-                                </a>
-                            </li>
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Atendimento Digital
-                                </a>
-                            </li>
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Atendimento à Empresas
-                                </a>
-                            </li>
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Perguntas Frequentes
-                                </a>
-                            </li>
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Fale Conosco
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3 class="footerTitulo">
+                        Central de Atendimento
+                    </h3>
+                    <ul class="footerLista">
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Unidades
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Atendimento Digital
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Atendimento à Empresas
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Perguntas Frequentes
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Fale Conosco
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footerGrid_sub">
-                    <div class="footerGrid_sub">
-                        <h3 class="footerTitulo">
-                            O Sistema de Vacina Único
-                        </h3>
-                        <ul class="footerLista">
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Quem Somos
-                                </a>
-                            </li>
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Eventos
-                                </a>
-                            </li>
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Política de Privacidade
-                                </a>
-                            </li>
-                            <li class="footerLista_itens">
-                                <a class="footerLink" href="#">
-                                    Trabalhe Conosco
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    <h3 class="footerTitulo">
+                        O Sistema de Vacina Único
+                    </h3>
+                    <ul class="footerLista">
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Quem Somos
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Eventos
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Política de Privacidade
+                            </a>
+                        </li>
+                        <li class="footerLista_itens">
+                            <a class="footerLink" href="#">
+                                Trabalhe Conosco
+                            </a>
+                        </li>
+                    </ul>
+                </div>    
             </div>
             <!-- APP STORE -->
             <div class="footerBaixeApp">
