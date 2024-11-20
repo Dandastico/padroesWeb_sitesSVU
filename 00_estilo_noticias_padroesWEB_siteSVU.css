@@ -1,0 +1,119 @@
+.noticias-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.noticias-titulo {
+    font-size: 2.5rem;
+    color: var(--corPreta);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Seção de destaque */
+.noticias-destaque {
+    margin-bottom: 3rem;
+}
+
+.noticia-principal {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-principal img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.noticia-conteudo {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.noticia-categoria {
+    background-color: var(--corAzulPrimaria);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Grid de notícias */
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.noticia-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.noticia-card:hover {
+    transform: translateY(-5px);
+}
+
+.noticia-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Paginação */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagina-anterior,
+.proxima-pagina {
+    padding: 0.5rem 1rem;
+    background-color: var(--corAzulPrimaria);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.numeros-pagina {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.numeros-pagina span {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.pagina-atual {
+    background-color: var(--corAzulPrimaria);
+    color: white;
+    border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .noticia-principal {
+        flex-direction: column;
+    }
+
+    .noticia-principal img {
+        width: 100%;
+        height: 300px;
+    }
+}

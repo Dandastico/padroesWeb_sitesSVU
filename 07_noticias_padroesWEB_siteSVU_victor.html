@@ -4,7 +4,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./00_estilo_padroesWEB_siteSVU.css" />
-        <title>SVU: Sistema de Vacina Único </title>
+        <link rel="stylesheet" href="./00_estilo_noticias_padroesWEB_siteSVU.css" />
+        <title>SVU: Notícias</title>
     </head>
     <body>
         <!--NAVEGAÇÃO-->
@@ -62,7 +63,7 @@
                     <li class="navItens">
                         <a class="navLinks" href="./07_noticias_padroesWEB_siteSVU_victor.html">
                             Notícias
-                        </a>
+                        </a> 
                     </li>
                     <!-- FALE CONOSCO + DROPDOWN -->
                     <li class="navItens">
@@ -104,166 +105,58 @@
                 </ul>
             </nav>
         </header>
-        <main>
-        <!-- FORMULÁRIO PRÉ-AGENDAMENTO -->
-            <section>
-                <div class="formTitulo_container_preAtendimento">
-                    <h2 class="formTitulo_preAtendimento">
-                        Pré-agendamento
-                    </h2>
-                    <p>
-                        Bem-vindo ao pré-agendamento do Sistema de Vacina Unificado!
-                    </p>
-                    <p>
-                        Tenha em mãos os documentos pessoais necessários de quem ganhará a(s) vacina(s).
-                    </p>
-                    <p class="alerta_preAtendimento">
-                        <em>Atenção:</em> para validar a solicitação, não esqueça de clicar em "SALVAR DADOS" ao final
-                    </p>
-                    <h3 class="tituloSecao">
-                        Preencha o formulário a seguir com os dados da pessoa que será atendida:
-                    </h3>
-                </div>
-                <form class="form_preAtendimento">
-                    <!-- NACIONALIDADE -->
-                    <div class="container_formFlexRow">
-                        <span class="rotuloInput">
-                            Nacionalidade
-                        </span>
-                        <div>
-                            <label for="brasileira" class="rotuloInput_nacionalidade">
-                                Brasileira
-                            </label>
-                            <input type="radio" id="brasileira" name="nacionalidade" value="brasileira" class="form_inputRadio"/>
-                            <label for="estrangeira" class="rotuloInput_nacionalidade">
-                                Estrangeira
-                            </label>
-                            <input type="radio" id="estrangeira" name="nacionalidade" value="estrangeira" class="form_inputRadio" />
+
+        <main class="noticias-container">
+            <h1 class="noticias-titulo">Últimas Notícias sobre Vacinação</h1>
+            
+            <section class="noticias-destaque">
+                <article class="noticia-principal">
+                    <img src="https://estado.sc.gov.br/noticias/wp-content/uploads/sites/3/2024/03/52810675783_bc4893fa0c_k.jpg" alt="Vacinação em massa" />
+                    <div class="noticia-conteudo">
+                        <span class="noticia-categoria">Destaque</span>
+                        <h2>Nova campanha de vacinação contra gripe começa em todo o país</h2>
+                        <p>Ministério da Saúde anuncia início da campanha nacional de vacinação contra gripe...</p>
+                        <div class="noticia-metadata">
+                            <span class="data">15 de Março, 2024</span>
+                            <a href="#" class="ler-mais">Ler mais</a>
                         </div>
                     </div>
-                    <!-- NOME E CPF -->
-                    <div class="container_formFlexRow">
-                        <div class="container_formNome container_inputColumn">
-                            <label for="nomePaciente" class="rotuloInput">
-                                Nome
-                            </label>
-                            <input type="text" id="nomePaciente" name="nomePaciente" class="inputBordaChique" />
-                        </div>
-                        <div class="container_formCPF container_inputColumn">
-                            <label for="cpfPaciente" class="rotuloInput">
-                                CPF
-                            </label>
-                            <input type="text" id="cpfPaciente" name="cpfPaciente" class="inputBordaChique" />
-                        </div>
-                    </div>
-                    <h3 class="form_tituloSecao">
-                        Contato
-                    </h3>
-                    <p class="tituloSecao_explicado">
-                        Os dados informados abaixo serão utilizados apenas para comunicarmos o status do agendamento.
-                    </p>
-                    <!-- EMAIL E TELEFONE -->
-                    <div class="container_formFlexRow">
-                        <div class="container_formEmail container_inputColumn">
-                            <label for="emailPaciente" class="rotuloInput">
-                                Email
-                            </label>
-                            <input type="email" id="emailPaciente" name="emailPaciente" class="inputBordaChique" />
-                        </div>
-                        <div class="container_formTelefone container_inputColumn">
-                            <label for="telefonePaciente" class="rotuloInput">
-                                Telefone
-                            </label>
-                            <input type="tel" id="telefonePaciente" name="telefonePaciente" class="inputBordaChique" />
-                        </div>
-                    </div>
-                    <!-- VACINA DESEJADA -->
-                    <div class="container_formFlexColumn">
-                        <label for="vacinaDesejada" class="rotuloInput">
-                            <h3 class="form_tituloSecao">
-                                Vacina desejada
-                            </h3>
-                        </label>
-                        <select id="vacinaDesejada" name="vacinaDesejada" class="form_vacinaDesejada inputBordaChique">
-                            <option value="" disabled selected>Escolha a vacina desejada</option>
-                            <option value="covid">COVID</option>
-                            <option value="hepatite">Hepatite</option>
-                            <option value="poliomielite">Poliomielite</option>
-                        </select>
-                    </div>
-                    <!-- LOCAL E MAPA -->
-                    <div class="container_formFlexColumn container_inputColumn">
-                        <h3 class="form_tituloSecao">
-                            Local
-                        </h3>
-                        <div class="container_formRegiao container_inputColumn">
-                            <label for="regiao" class="rotuloInput">
-                                Região Administrativa
-                            </label>
-                            <select id="regiao" name="regiao"  class="inputBordaChique">
-                                <option value="" disabled selected>Escolha região administrativa</option>
-                                <option value="">Água Quente (RA XXXV)</option>
-                                <option value="">Arapoanga (RA XXXIV)</option>
-                                <option value="">Águas Claras (RA XX)</option>
-                                <option value="">Arniqueira (RA XXXIII)</option>
-                                <option value="">Brazlândia (RA IV)</option>
-                                <option value="">Candangolândia (RA XIX)</option>
-                                <option value="">Ceilândia (RA IX)</option>
-                                <option value="">Cruzeiro (RA XI)</option>
-                                <option value="">Fercal (RA XXXI)</option>
-                                <option value="">Gama (RA II)</option>
-                                <option value="">Guará (RA X)</option>
-                                <option value="">Itapoâ (RA XXVIII)</option>
-                                <option value="">Jardin Botânico (RA XXVII)</option>
-                                <option value="">Lago Norte (RA XVIII)</option>
-                                <option value="">Lago Sul (RA XVI)</option>
-                                <option value="">Núcleo Bandeirante (RA VIII)</option>
-                                <option value="">Paranoá (RA VII)</option>
-                                <option value="">Park Way (RA XXIV)</option>
-                                <option value="">Planaltina (RA VI)</option>
-                                <option value="">Plano Piloto (RA I)</option>
-                                <option value="">Recanto das Emas (XV)</option>
-                                <option value="">Riacho Fundo (RA XVII)</option>
-                                <option value="">Riacho Fundo II (RA XXI)</option>
-                                <option value="">Samambaia (RA XII)</option>
-                                <option value="">Santa Maria (RA XIII)</option>
-                                <option value="">São Sebastião (RA XIV)</option>
-                                <option value="">SCIA/Estrutural (RA XXV)</option>
-                                <option value="">SIA (RA XXIX)</option>
-                                <option value="">Sobradinho (RA V)</option>
-                                <option value="">Sobradinho II (RA XXVI)</option>
-                                <option value="">Sol Nascente e Pôr do Sol ( RA XXXII)</option>
-                                <option value="">Sudoeste/Octogonal (RA XXII)</option>
-                                <option value="">Taguatinga (RA III)</option>
-                                <option value="">Varjão (RA XXIII)</option>
-                                <option value="">Vicente Pires (RA XXX)</option>
-                            </select>
-                        </div>
-                        <div class="container_formPosto container_inputColumn">
-                            <label for="postoSUS" class="rotuloInput">
-                                Unidade SUS
-                            </label>
-                            <select id="postoSUS" name="postoSUS" class="inputBordaChique">
-                                <option value="" disabled selected>Escolha unidade SUS</option>
-                                <option value="">Posto 1</option>
-                                <option value="">Posto 2</option>
-                                <option value="">Posto 3</option>
-                                <option value="">Posto 4</option>
-                                <option value="">Posto 5</option>
-                            </select>
-                        </div>
-                        <!-- GOOGLE MAPS -->
-                        <iframe class="form_googleMaps" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30708.0118748962!2d-47.91009281524729!3d-15.830218856296415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sposto%20de%20saude%20sus!5e0!3m2!1spt-BR!2sbr!4v1731581489177!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </form>
+                </article>
             </section>
-        </main>     
+
+            <section class="noticias-grid">
+                <article class="noticia-card">
+                    <img src="https://i.imgur.com/exemplo2.jpg" alt="Pesquisa vacinal" />
+                    <div class="noticia-conteudo">
+                        <span class="noticia-categoria">Pesquisa</span>
+                        <h3>Nova vacina contra dengue mostra resultados promissores</h3>
+                        <p>Estudos clínicos apresentam eficácia de 85% na prevenção...</p>
+                        <div class="noticia-metadata">
+                            <span class="data">14 de Março, 2024</span>
+                            <a href="#" class="ler-mais">Ler mais</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Mais cards de notícias aqui -->
+            </section>
+
+            <div class="paginacao">
+                <button class="pagina-anterior">Anterior</button>
+                <div class="numeros-pagina">
+                    <span class="pagina-atual">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+                <button class="proxima-pagina">Próxima</button>
+            </div>
+        </main>
+
         <!--RODAPÉ-->
         <footer>
             <!-- LOGOTIPO E REDES SOCIAIS RODAPÉ -->
             <div class="footerLogoSocial">
                 <div class="footerLogo">
-                    <img class="footerLogo_img" src="https://i.imgur.com/UKIW3UC.png" alt="Logotipo do SVU branca" />
+                    <img class="footerLogo_img" src="./_imagens_padroesWEB_siteSVU/_logo_svu_horizontal_branca.png" alt="Logotipo do SVU branca" />
                 </div>
                 <div class="footerSocial">
                     <ul>
@@ -290,12 +183,12 @@
                     </h3>
                     <ul class="footerLista">
                         <li class="footerLista_itens">
-                            <a class="footerLink" href="./03_preAgendamento_padroesWeb_siteSVU.html">
+                            <a class="footerLink" href="#">
                                 Pré-Agendamento
                             </a>
                         </li>
                         <li class="footerLista_itens">
-                            <a class="footerLink" href="./02_cartaoVac_padroesWeb_siteSVU.html">
+                            <a class="footerLink" href="#">
                                 Cartão de Vacinas
                             </a>
                         </li>
@@ -327,12 +220,12 @@
                             </a>
                         </li>
                         <li class="footerLista_itens">
-                            <a class="footerLink" href="./05_faq_padroesWeb_siteSVU_filipe.html">
+                            <a class="footerLink" href="#">
                                 Perguntas Frequentes
                             </a>
                         </li>
                         <li class="footerLista_itens">
-                            <a class="footerLink" href="./06_faleConosco_padroesWeb_siteSVU_lucas.html">
+                            <a class="footerLink" href="#">
                                 Fale Conosco
                             </a>
                         </li>
@@ -386,8 +279,9 @@
 
         <!-- JAVASCRIPT -->
         <script src="./00_javaScript_padroesWeb_siteSVU.js"></script>
-        <!-- JAVASCRIPT DOS ÍCONES DAS REDES SOCIAIS -->
+        <script src="./00_javaScript_noticias_padroesWEB_siteSVU.js"></script>
+        <!-- JAVASCRIPT DOS ÍCONES -->
         <script src="https://kit.fontawesome.com/d98fb0a598.js" crossorigin="anonymous"></script>
-        
+
     </body>
 </html>
