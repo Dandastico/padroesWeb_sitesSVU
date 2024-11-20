@@ -62,7 +62,7 @@
                     <li class="navItens">
                         <a class="navLinks" href="./07_noticias_padroesWEB_siteSVU_victor.html">
                             Notícias
-                        </a>
+                        </a> 
                     </li>
                     <!-- FALE CONOSCO + DROPDOWN -->
                     <li class="navItens">
@@ -105,157 +105,171 @@
             </nav>
         </header>
         <main>
-        <!-- FORMULÁRIO PRÉ-AGENDAMENTO -->
+            <!-- TÍTULO DA PÁGINA + INPUT PARA SELECIONAR -->
             <section>
-                <div class="formTitulo_container_preAtendimento">
-                    <h2 class="formTitulo_preAtendimento">
-                        Pré-agendamento
-                    </h2>
-                    <p>
-                        Bem-vindo ao pré-agendamento do Sistema de Vacina Unificado!
-                    </p>
-                    <p>
-                        Tenha em mãos os documentos pessoais necessários de quem ganhará a(s) vacina(s).
-                    </p>
-                    <p class="alerta_preAtendimento">
-                        <em>Atenção:</em> para validar a solicitação, não esqueça de clicar em "SALVAR DADOS" ao final
-                    </p>
-                    <h3 class="tituloSecao">
-                        Preencha o formulário a seguir com os dados da pessoa que será atendida:
-                    </h3>
-                </div>
-                <form class="form_preAtendimento">
-                    <!-- NACIONALIDADE -->
-                    <div class="container_formFlexRow">
-                        <span class="rotuloInput">
-                            Nacionalidade
-                        </span>
-                        <div>
-                            <label for="brasileira" class="rotuloInput_nacionalidade">
-                                Brasileira
-                            </label>
-                            <input type="radio" id="brasileira" name="nacionalidade" value="brasileira" class="form_inputRadio"/>
-                            <label for="estrangeira" class="rotuloInput_nacionalidade">
-                                Estrangeira
-                            </label>
-                            <input type="radio" id="estrangeira" name="nacionalidade" value="estrangeira" class="form_inputRadio" />
-                        </div>
+                <div class="containerMain_coluna">
+                    <div class="inteiroContainer paddingLateral">
+                        <h2 class="tituloMain_esquerdo">
+                            Roteiro das Vacinas
+                        </h2>
+                        <p class="paragrafoMain">
+                            O Calendário Nacional de Vacinação do Sistema Único de Saúde - SUS é uma iniciativa abrangente que se destina a garantir a saúde coletiva por meio de uma imunização eficaz, sendo especialmente projetado para atender às necessidades de diversos grupos da população, abrangendo cuidadosamente crianças, adolescentes, adultos, gestantes e idosos.
+                        </p>
+                        <p class="paragrafoMain">
+                            Verifique quais vacinas você tem direito abaixo!
+                        </p>
+                        <span class="bordaAbaixo"></span>
                     </div>
-                    <!-- NOME E CPF -->
-                    <div class="container_formFlexRow">
-                        <div class="container_formNome container_inputColumn">
-                            <label for="nomePaciente" class="rotuloInput">
-                                Nome
-                            </label>
-                            <input type="text" id="nomePaciente" name="nomePaciente" class="inputBordaChique" />
-                        </div>
-                        <div class="container_formCPF container_inputColumn">
-                            <label for="cpfPaciente" class="rotuloInput">
-                                CPF
-                            </label>
-                            <input type="text" id="cpfPaciente" name="cpfPaciente" class="inputBordaChique" />
-                        </div>
-                    </div>
-                    <h3 class="form_tituloSecao">
-                        Contato
-                    </h3>
-                    <p class="tituloSecao_explicado">
-                        Os dados informados abaixo serão utilizados apenas para comunicarmos o status do agendamento.
-                    </p>
-                    <!-- EMAIL E TELEFONE -->
-                    <div class="container_formFlexRow">
-                        <div class="container_formEmail container_inputColumn">
-                            <label for="emailPaciente" class="rotuloInput">
-                                Email
-                            </label>
-                            <input type="email" id="emailPaciente" name="emailPaciente" class="inputBordaChique" />
-                        </div>
-                        <div class="container_formTelefone container_inputColumn">
-                            <label for="telefonePaciente" class="rotuloInput">
-                                Telefone
-                            </label>
-                            <input type="tel" id="telefonePaciente" name="telefonePaciente" class="inputBordaChique" />
-                        </div>
-                    </div>
-                    <!-- VACINA DESEJADA -->
-                    <div class="container_formFlexColumn">
-                        <label for="vacinaDesejada" class="rotuloInput">
-                            <h3 class="form_tituloSecao">
-                                Vacina desejada
-                            </h3>
+                    <div class="container_selectRoteiroVac">
+                        <label for="roteiroVac" class="labelSelecionar_roteiroVac">
+                            Roteiro das Vacinas
                         </label>
-                        <select id="vacinaDesejada" name="vacinaDesejada" class="form_vacinaDesejada inputBordaChique">
-                            <option value="" disabled selected>Escolha a vacina desejada</option>
-                            <option value="covid">COVID</option>
-                            <option value="hepatite">Hepatite</option>
-                            <option value="poliomielite">Poliomielite</option>
+                        <select id="roteiroVac" name="roteiroVac" class="selecionar_roteiroVac inputBordaChique">
+                            <option value="" disabled selected>Escolha o roteiro de vacinação aqui</option>
+                            <option>Criança (0 a 10 anos)</option>
+                            <option>Adolescente (11 a 17 anos)</option>
+                            <option>Adulto (18 a 59 anos)</option>
+                            <option>Gestante</option>
+                            <option>Idoso (A partir dos 60 anos)</option>
                         </select>
                     </div>
-                    <!-- LOCAL E MAPA -->
-                    <div class="container_formFlexColumn container_inputColumn">
-                        <h3 class="form_tituloSecao">
-                            Local
-                        </h3>
-                        <div class="container_formRegiao container_inputColumn">
-                            <label for="regiao" class="rotuloInput">
-                                Região Administrativa
-                            </label>
-                            <select id="regiao" name="regiao"  class="inputBordaChique">
-                                <option value="" disabled selected>Escolha região administrativa</option>
-                                <option value="">Água Quente (RA XXXV)</option>
-                                <option value="">Arapoanga (RA XXXIV)</option>
-                                <option value="">Águas Claras (RA XX)</option>
-                                <option value="">Arniqueira (RA XXXIII)</option>
-                                <option value="">Brazlândia (RA IV)</option>
-                                <option value="">Candangolândia (RA XIX)</option>
-                                <option value="">Ceilândia (RA IX)</option>
-                                <option value="">Cruzeiro (RA XI)</option>
-                                <option value="">Fercal (RA XXXI)</option>
-                                <option value="">Gama (RA II)</option>
-                                <option value="">Guará (RA X)</option>
-                                <option value="">Itapoâ (RA XXVIII)</option>
-                                <option value="">Jardin Botânico (RA XXVII)</option>
-                                <option value="">Lago Norte (RA XVIII)</option>
-                                <option value="">Lago Sul (RA XVI)</option>
-                                <option value="">Núcleo Bandeirante (RA VIII)</option>
-                                <option value="">Paranoá (RA VII)</option>
-                                <option value="">Park Way (RA XXIV)</option>
-                                <option value="">Planaltina (RA VI)</option>
-                                <option value="">Plano Piloto (RA I)</option>
-                                <option value="">Recanto das Emas (XV)</option>
-                                <option value="">Riacho Fundo (RA XVII)</option>
-                                <option value="">Riacho Fundo II (RA XXI)</option>
-                                <option value="">Samambaia (RA XII)</option>
-                                <option value="">Santa Maria (RA XIII)</option>
-                                <option value="">São Sebastião (RA XIV)</option>
-                                <option value="">SCIA/Estrutural (RA XXV)</option>
-                                <option value="">SIA (RA XXIX)</option>
-                                <option value="">Sobradinho (RA V)</option>
-                                <option value="">Sobradinho II (RA XXVI)</option>
-                                <option value="">Sol Nascente e Pôr do Sol ( RA XXXII)</option>
-                                <option value="">Sudoeste/Octogonal (RA XXII)</option>
-                                <option value="">Taguatinga (RA III)</option>
-                                <option value="">Varjão (RA XXIII)</option>
-                                <option value="">Vicente Pires (RA XXX)</option>
-                            </select>
+                </div>
+            </section>
+            <!-- SLIDE DOS CARDS O ROTEIRO DAS VACINAS -->
+            <section>
+                <div class="containerMain_roteiroVac">
+                    <div class="container_roteiroVac paddingLateral">
+                        <div class="roteiroVac">
+                            <div class="corFundo_titulo_roteiroVac">
+                                <div class="titulo_roteiroVac">
+                                    <img class="imagem_roteiroVac" src="https://i.imgur.com/XxQ6TEt.png"  alt="Imagem representativo do roteiro de vacinas"/>
+                                    <h3>
+                                        Criança <span>(0 a 10 anos)</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <ul class="lista_idadeRoteiroVac">
+                                <li>
+                                    <h4 class="tempo_roteiroVac">
+                                        Ao nascer
+                                    </h4>
+                                </li>
+                                <li class="itemLista_flex">
+                                    <img class="statusVac_roteiroVac" src="https://i.imgur.com/JHF3d3Z.png" />
+                                    <ul>
+                                        <li class="nomeVac_roteiroVac">
+                                            BCG (Bacilo Calmette-Guerin)
+                                        </li>
+                                        <li class="explicacao_roteiroVac">
+                                            Previne as formas graves de tuberculose, principalmente miliar e meníngea
+                                        </li>
+                                        <li class="dose_roteiroVac">
+                                            Dose única
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="itemLista_flex">
+                                    <img class="statusVac_roteiroVac" src="https://i.imgur.com/JHF3d3Z.png" />
+                                    <ul>
+                                        <li class="nomeVac_roteiroVac">
+                                            Hepatite B
+                                        </li>
+                                        <li class="explicacao_roteiroVac">
+                                            Previne a hepatite do tipo B
+                                        </li>
+                                        <li class="dose_roteiroVac">
+                                            Dose única
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="lista_idadeRoteiroVac">
+                                <li>
+                                    <h4 class="tempo_roteiroVac">
+                                        2 meses
+                                    </h4>
+                                </li>
+                                <li class="itemLista_flex">
+                                    <img class="statusVac_roteiroVac" src="https://i.imgur.com/JHF3d3Z.png" />
+                                    <ul>
+                                        <li class="nomeVac_roteiroVac">
+                                            Pentavalente (DTP/HB/Hib)
+                                        </li>
+                                        <li class="explicacao_roteiroVac">
+                                            Previne difteria, tétano, coqueluche, hepatite B e meningite e infecções por HiB
+                                        </li>
+                                        <li class="dose_roteiroVac">
+                                            Dose 1 de 2
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="itemLista_flex">
+                                    <img class="statusVac_roteiroVac" src="https://i.imgur.com/JHF3d3Z.png" />
+                                    <ul>
+                                        <li class="nomeVac_roteiroVac">
+                                            VIP (Poliomielite inativada)
+                                        </li>
+                                        <li class="explicacao_roteiroVac">
+                                            Previne poliomielite ou paralisia infantil
+                                        </li>
+                                        <li class="dose_roteiroVac">
+                                            Dose 1 de 2
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="itemLista_flex">
+                                    <img class="statusVac_roteiroVac" src="https://i.imgur.com/JHF3d3Z.png" />
+                                    <ul>
+                                        <li class="nomeVac_roteiroVac">
+                                            Pneumocócica 10V
+                                        </li>
+                                        <li class="explicacao_roteiroVac">
+                                            Previne pneumonia, otite, meningite e outras doenças causadas pelo Pneumococo
+                                        </li>
+                                        <li class="dose_roteiroVac">
+                                            Dose 1 de 2
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="itemLista_flex">
+                                    <img class="statusVac_roteiroVac" src="https://i.imgur.com/JHF3d3Z.png" />
+                                    <ul>
+                                        <li class="nomeVac_roteiroVac">
+                                            Vacina rotavírus humano G1P1
+                                        </li>
+                                        <li class="explicacao_roteiroVac">
+                                            Previne as formas graves de tuberculose, principalmente miliar e meníngea
+                                        </li>
+                                        <li class="dose_roteiroVac">
+                                            Dose 1 de 2
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="lista_idadeRoteiroVac">
+                                <li class="tempo_roteiroVac">
+                                    <h4>
+                                        3 meses
+                                    </h4>
+                                </li>
+                                <li class="itemLista_flex">
+                                    <img class="statusVac_roteiroVac" src="https://i.imgur.com/crcfnoT.png" />
+                                    <ul>
+                                        <li class="nomeVac_roteiroVac">
+                                            Meningocócica C conjugada
+                                        </li>
+                                        <li class="explicacao_roteiroVac">
+                                            Previne a doença meningocócica C
+                                        </li>
+                                        <li class="dose_roteiroVac">
+                                            Dose 1 de 2
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="container_formPosto container_inputColumn">
-                            <label for="postoSUS" class="rotuloInput">
-                                Unidade SUS
-                            </label>
-                            <select id="postoSUS" name="postoSUS" class="inputBordaChique">
-                                <option value="" disabled selected>Escolha unidade SUS</option>
-                                <option value="">Posto 1</option>
-                                <option value="">Posto 2</option>
-                                <option value="">Posto 3</option>
-                                <option value="">Posto 4</option>
-                                <option value="">Posto 5</option>
-                            </select>
-                        </div>
-                        <!-- GOOGLE MAPS -->
-                        <iframe class="form_googleMaps" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30708.0118748962!2d-47.91009281524729!3d-15.830218856296415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sposto%20de%20saude%20sus!5e0!3m2!1spt-BR!2sbr!4v1731581489177!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                </form>
+                </div>
             </section>
         </main>     
         <!--RODAPÉ-->
